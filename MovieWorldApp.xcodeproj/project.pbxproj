@@ -7,15 +7,20 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		F07904682BA093C5000EA4B5 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = F07904672BA093C5000EA4B5 /* Alamofire */; };
+		F079046A2BA093C5000EA4B5 /* AlamofireDynamic in Frameworks */ = {isa = PBXBuildFile; productRef = F07904692BA093C5000EA4B5 /* AlamofireDynamic */; };
+		F079046D2BA093E2000EA4B5 /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = F079046C2BA093E2000EA4B5 /* SnapKit */; };
+		F079046F2BA093E2000EA4B5 /* SnapKit-Dynamic in Frameworks */ = {isa = PBXBuildFile; productRef = F079046E2BA093E2000EA4B5 /* SnapKit-Dynamic */; };
+		F07904712BA0C561000EA4B5 /* OnboardViewControler.swift in Sources */ = {isa = PBXBuildFile; fileRef = F07904702BA0C561000EA4B5 /* OnboardViewControler.swift */; };
 		F091EBC62B9FBA4400A6A042 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F091EBC52B9FBA4400A6A042 /* AppDelegate.swift */; };
 		F091EBC82B9FBA4400A6A042 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F091EBC72B9FBA4400A6A042 /* SceneDelegate.swift */; };
 		F091EBCA2B9FBA4400A6A042 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F091EBC92B9FBA4400A6A042 /* ViewController.swift */; };
-		F091EBCD2B9FBA4400A6A042 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F091EBCB2B9FBA4400A6A042 /* Main.storyboard */; };
 		F091EBCF2B9FBA4600A6A042 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F091EBCE2B9FBA4600A6A042 /* Assets.xcassets */; };
 		F091EBD22B9FBA4600A6A042 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F091EBD02B9FBA4600A6A042 /* LaunchScreen.storyboard */; };
 		F091EBDD2B9FBA4600A6A042 /* MovieWorldAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F091EBDC2B9FBA4600A6A042 /* MovieWorldAppTests.swift */; };
 		F091EBE72B9FBA4600A6A042 /* MovieWorldAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F091EBE62B9FBA4600A6A042 /* MovieWorldAppUITests.swift */; };
 		F091EBE92B9FBA4600A6A042 /* MovieWorldAppUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F091EBE82B9FBA4600A6A042 /* MovieWorldAppUITestsLaunchTests.swift */; };
+		F0CAEAF12BA2168900F2F5B9 /* OnboardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0CAEAF02BA2168900F2F5B9 /* OnboardView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,11 +41,11 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		F07904702BA0C561000EA4B5 /* OnboardViewControler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardViewControler.swift; sourceTree = "<group>"; };
 		F091EBC22B9FBA4400A6A042 /* MovieWorldApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MovieWorldApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F091EBC52B9FBA4400A6A042 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F091EBC72B9FBA4400A6A042 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		F091EBC92B9FBA4400A6A042 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		F091EBCC2B9FBA4400A6A042 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		F091EBCE2B9FBA4600A6A042 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F091EBD12B9FBA4600A6A042 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F091EBD32B9FBA4600A6A042 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -49,6 +54,7 @@
 		F091EBE22B9FBA4600A6A042 /* MovieWorldAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MovieWorldAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		F091EBE62B9FBA4600A6A042 /* MovieWorldAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieWorldAppUITests.swift; sourceTree = "<group>"; };
 		F091EBE82B9FBA4600A6A042 /* MovieWorldAppUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieWorldAppUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		F0CAEAF02BA2168900F2F5B9 /* OnboardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +62,10 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F079046D2BA093E2000EA4B5 /* SnapKit in Frameworks */,
+				F07904682BA093C5000EA4B5 /* Alamofire in Frameworks */,
+				F079046A2BA093C5000EA4B5 /* AlamofireDynamic in Frameworks */,
+				F079046F2BA093E2000EA4B5 /* SnapKit-Dynamic in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -99,10 +109,14 @@
 		F091EBC42B9FBA4400A6A042 /* MovieWorldApp */ = {
 			isa = PBXGroup;
 			children = (
-				F091EBC52B9FBA4400A6A042 /* AppDelegate.swift */,
 				F091EBC72B9FBA4400A6A042 /* SceneDelegate.swift */,
+				F091EBC52B9FBA4400A6A042 /* AppDelegate.swift */,
+				F091EBF92B9FBE2F00A6A042 /* Presenter */,
+				F091EBF82B9FBE2300A6A042 /* Entity */,
+				F091EBF72B9FBE1300A6A042 /* Router */,
+				F091EBF62B9FBDE400A6A042 /* Interactor */,
+				F091EBF52B9FBDDB00A6A042 /* View */,
 				F091EBC92B9FBA4400A6A042 /* ViewController.swift */,
-				F091EBCB2B9FBA4400A6A042 /* Main.storyboard */,
 				F091EBCE2B9FBA4600A6A042 /* Assets.xcassets */,
 				F091EBD02B9FBA4600A6A042 /* LaunchScreen.storyboard */,
 				F091EBD32B9FBA4600A6A042 /* Info.plist */,
@@ -127,6 +141,43 @@
 			path = MovieWorldAppUITests;
 			sourceTree = "<group>";
 		};
+		F091EBF52B9FBDDB00A6A042 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				F07904702BA0C561000EA4B5 /* OnboardViewControler.swift */,
+				F0CAEAF02BA2168900F2F5B9 /* OnboardView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		F091EBF62B9FBDE400A6A042 /* Interactor */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Interactor;
+			sourceTree = "<group>";
+		};
+		F091EBF72B9FBE1300A6A042 /* Router */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Router;
+			sourceTree = "<group>";
+		};
+		F091EBF82B9FBE2300A6A042 /* Entity */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Entity;
+			sourceTree = "<group>";
+		};
+		F091EBF92B9FBE2F00A6A042 /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -143,6 +194,12 @@
 			dependencies = (
 			);
 			name = MovieWorldApp;
+			packageProductDependencies = (
+				F07904672BA093C5000EA4B5 /* Alamofire */,
+				F07904692BA093C5000EA4B5 /* AlamofireDynamic */,
+				F079046C2BA093E2000EA4B5 /* SnapKit */,
+				F079046E2BA093E2000EA4B5 /* SnapKit-Dynamic */,
+			);
 			productName = MovieWorldApp;
 			productReference = F091EBC22B9FBA4400A6A042 /* MovieWorldApp.app */;
 			productType = "com.apple.product-type.application";
@@ -215,6 +272,10 @@
 				Base,
 			);
 			mainGroup = F091EBB92B9FBA4400A6A042;
+			packageReferences = (
+				F07904662BA093C5000EA4B5 /* XCRemoteSwiftPackageReference "Alamofire" */,
+				F079046B2BA093E2000EA4B5 /* XCRemoteSwiftPackageReference "SnapKit" */,
+			);
 			productRefGroup = F091EBC32B9FBA4400A6A042 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -233,7 +294,6 @@
 			files = (
 				F091EBD22B9FBA4600A6A042 /* LaunchScreen.storyboard in Resources */,
 				F091EBCF2B9FBA4600A6A042 /* Assets.xcassets in Resources */,
-				F091EBCD2B9FBA4400A6A042 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -258,6 +318,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F07904712BA0C561000EA4B5 /* OnboardViewControler.swift in Sources */,
+				F0CAEAF12BA2168900F2F5B9 /* OnboardView.swift in Sources */,
 				F091EBCA2B9FBA4400A6A042 /* ViewController.swift in Sources */,
 				F091EBC62B9FBA4400A6A042 /* AppDelegate.swift in Sources */,
 				F091EBC82B9FBA4400A6A042 /* SceneDelegate.swift in Sources */,
@@ -297,14 +359,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		F091EBCB2B9FBA4400A6A042 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				F091EBCC2B9FBA4400A6A042 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		F091EBD02B9FBA4600A6A042 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -442,11 +496,11 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = R7B985JJF2;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = MovieWorldApp/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -469,11 +523,11 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = R7B985JJF2;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = MovieWorldApp/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -601,6 +655,48 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		F07904662BA093C5000EA4B5 /* XCRemoteSwiftPackageReference "Alamofire" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Alamofire/Alamofire.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.9.0;
+			};
+		};
+		F079046B2BA093E2000EA4B5 /* XCRemoteSwiftPackageReference "SnapKit" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SnapKit/SnapKit.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.7.1;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		F07904672BA093C5000EA4B5 /* Alamofire */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = F07904662BA093C5000EA4B5 /* XCRemoteSwiftPackageReference "Alamofire" */;
+			productName = Alamofire;
+		};
+		F07904692BA093C5000EA4B5 /* AlamofireDynamic */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = F07904662BA093C5000EA4B5 /* XCRemoteSwiftPackageReference "Alamofire" */;
+			productName = AlamofireDynamic;
+		};
+		F079046C2BA093E2000EA4B5 /* SnapKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = F079046B2BA093E2000EA4B5 /* XCRemoteSwiftPackageReference "SnapKit" */;
+			productName = SnapKit;
+		};
+		F079046E2BA093E2000EA4B5 /* SnapKit-Dynamic */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = F079046B2BA093E2000EA4B5 /* XCRemoteSwiftPackageReference "SnapKit" */;
+			productName = "SnapKit-Dynamic";
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = F091EBBA2B9FBA4400A6A042 /* Project object */;
 }
