@@ -9,13 +9,23 @@
 import UIKit
 import SnapKit
 
-final class OnboardMove:UIViewController{
+
+protocol OnboardViewControllerProtocol:AnyObject {
+    
+}
+final class OnboardMoveContoroller:UIViewController{
+    
+    var presenter: OnboardPresenterProtocol?
+    
+   
     override func loadView() {
             let onBoardView = OnboardView(self)
             view = onBoardView
             onBoardView.delegate = self
         }
+    
     override func viewDidLoad() {
+    
         super.viewDidLoad()
         view.backgroundColor = .colorGray
     
@@ -27,9 +37,13 @@ final class OnboardMove:UIViewController{
 //#Preview{
 //    OnboardMove()
 //}
-extension OnboardMove :OnBoardViewProtocol{
+extension OnboardMoveContoroller :OnBoardViewProtocol{
     func onTappedContiuneButton() {
-    print("hello")
+        presenter?.checkAndNavigateTestPage()
+    
     }
+    
+}
+extension OnboardMoveContoroller :OnboardViewControllerProtocol{
     
 }
