@@ -15,7 +15,8 @@ final class OnboardRouter :OnboardRouterProtocol{
     
     func navigateToLogin(from view: OnboardViewControllerProtocol?) {
         guard let viewController = view as? UIViewController else { return }
-        viewController.navigationController?.pushViewController(ViewController(), animated: true)
+        viewController.navigationController?.navigationBar.tintColor = .white
+        viewController.navigationController?.pushViewController(LoginVC(), animated: true)
     }
     
     

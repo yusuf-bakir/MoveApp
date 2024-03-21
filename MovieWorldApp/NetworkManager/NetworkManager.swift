@@ -11,7 +11,6 @@ protocol NetworkManagerProtocol {
     func makeRequest <T:Codable>(type:T,url :String,method:HTTPMethod,completion:@escaping((Result<T,ErrorTypes>)->()))
 }
 class NetworkManager {
-    
     func makeRequest <T:Codable>(type:T,url :String,method:HTTPMethod,completion:@escaping((Result<T,ErrorTypes>)->())) {
         AF.request(url.addingPercentEncoding(withAllowedCharacters: .afURLQueryAllowed) ?? "").responseData(completionHandler: { response in
             

@@ -50,7 +50,6 @@ class OnboardView <T: OnboardMoveContoroller>:UIView{
     private lazy var profileImage : UIImageView = {
         let imageView = UIImageView()
         imageView.image = UIImage.camera
-    
         imageView.contentMode = .scaleAspectFit
         imageView.translatesAutoresizingMaskIntoConstraints = false
         return imageView
@@ -80,7 +79,7 @@ class OnboardView <T: OnboardMoveContoroller>:UIView{
          self.controler = controller
          super.init(frame: .zero)
         
-        backgroundColor = .colorGray
+         backgroundColor = .color1
          addSubview(profileTitleLabel)
          addSubview(profileSubTitle )
          addSubview(profileImage)

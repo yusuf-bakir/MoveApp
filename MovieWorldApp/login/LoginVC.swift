@@ -7,21 +7,20 @@
 
 import UIKit
 
-final class LoginVC: UIViewController {
+ class LoginVC: UIViewController {
+   
     override func loadView() {
-            let login = Login(self)
-            view = login
+        let login = LoginView(self)
+        view = login
         }
     override func viewDidLoad() {
         super.viewDidLoad()
-
         // Do any additional setup after loading the view.
+        
+       
     }
     
 
    
 
-}
-#Preview {
-    LoginVC()
 }

@@ -27,16 +27,14 @@ final class OnboardMoveContoroller:UIViewController{
     override func viewDidLoad() {
     
         super.viewDidLoad()
-        view.backgroundColor = .colorGray
+        view.backgroundColor = .color1
     
        
         
     }
     
 }
-//#Preview{
-//    OnboardMove()
-//}
+ 
 extension OnboardMoveContoroller :OnBoardViewProtocol{
     func onTappedContiuneButton() {
         presenter?.checkAndNavigateTestPage()
