@@ -98,6 +98,7 @@ class LoginView<T:LoginVC>:UIView {
         addSubview(signinButtom)
         backgroundColor = UIColor.color1
         stupCompenent()
+        print("delete swift.yml")
     }
     
     required init?(coder: NSCoder) {
