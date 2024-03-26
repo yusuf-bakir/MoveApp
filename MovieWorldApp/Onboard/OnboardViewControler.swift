@@ -15,7 +15,7 @@ protocol OnboardViewControllerProtocol:AnyObject {
 }
 final class OnboardMoveContoroller:UIViewController{
     
-    var presenter: OnboardPresenterProtocol?
+    var presenterOnboard: OnboardPresenterProtocol?
     
    
     override func loadView() {
@@ -25,10 +25,12 @@ final class OnboardMoveContoroller:UIViewController{
         }
     
     override func viewDidLoad() {
-    
+       
         super.viewDidLoad()
-        view.backgroundColor = .color1
+        
     
+        view.backgroundColor = .color1
+        
        
         
     }
@@ -37,7 +39,8 @@ final class OnboardMoveContoroller:UIViewController{
  
 extension OnboardMoveContoroller :OnBoardViewProtocol{
     func onTappedContiuneButton() {
-        presenter?.checkAndNavigateTestPage()
+       presenterOnboard?.checkAndNavigateTestPage()
+       
     
     }
     

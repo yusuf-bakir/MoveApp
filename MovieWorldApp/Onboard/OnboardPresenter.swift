@@ -10,24 +10,29 @@ import UIKit
 
 protocol OnboardPresenterProtocol:AnyObject{
     
-    var router: OnboardRouterProtocol? { get set }
-    var view: OnboardViewControllerProtocol? { get set }
+    var OnboardRouter: OnboardRouterProtocol? { get set }
+    var viewAuth: OnboardViewControllerProtocol? { get set }
+    func viewDidLoad()
     func checkAndNavigateTestPage()
 }
 
 
 
 final class OnboardPresenter:OnboardPresenterProtocol{
-    init(router: OnboardRouterProtocol? = nil, view: OnboardViewControllerProtocol? = nil) {
-        self.router = router
-        self.view = view
+    func viewDidLoad() {
+        print("onboradprotocol")
     }
-    var router: OnboardRouterProtocol?
     
-    var view: OnboardViewControllerProtocol?
+    init(OnboardRouter: OnboardRouterProtocol? = nil, viewAuth: OnboardViewControllerProtocol? = nil) {
+        self.OnboardRouter = OnboardRouter
+        self.viewAuth = viewAuth
+    }
+    var OnboardRouter: OnboardRouterProtocol?
+    
+    var viewAuth: OnboardViewControllerProtocol?
     
     func checkAndNavigateTestPage() {
-        router?.navigateToLogin(from: self.view)
+        OnboardRouter?.navigateToLogin(from: self.viewAuth)
     }
     
     

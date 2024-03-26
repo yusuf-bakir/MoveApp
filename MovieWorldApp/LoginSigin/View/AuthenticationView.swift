@@ -8,9 +8,15 @@
 import Foundation
 import UIKit
 import SnapKit
-class LoginView<T:LoginVC>:UIView {
+
+protocol AuthenticationViewProtocol:AnyObject {
+    func signinTappedButtom()
+    func loginTappedButtom ()
+}
+   
+  class AuthenticationView<T:AuthenticationVC>:UIView {
     var controller :T
-    
+    weak var AuthDelegate:AuthenticationViewProtocol?
     
     private lazy var logoLabel : UILabel =  {
         let label = UILabel()
@@ -68,28 +74,34 @@ class LoginView<T:LoginVC>:UIView {
         buttom.backgroundColor = .red
         buttom.translatesAutoresizingMaskIntoConstraints = false
         buttom.layer.cornerRadius = 16
-//        buttom.addAction(action, for: .touchUpInside)
+        buttom.addTarget(self, action: #selector(buttonTappedlogin), for: .touchUpInside)
+
      return buttom
     }()
     private lazy var signinButtom:UIButton = {
         let buttom = UIButton()
-        buttom.setTitle("Singin", for: .normal)
+        buttom.setTitle("Signin", for: .normal)
         buttom.setTitleColor(.white, for: .normal)
         buttom.backgroundColor = .red
         buttom.translatesAutoresizingMaskIntoConstraints = false
         buttom.layer.cornerRadius = 16
-//        buttom.addAction(action, for: .touchUpInside)
+        buttom.addAction(action, for: .touchUpInside)
      return buttom
     }()
-    
-    
-    
+      lazy var action : UIAction = UIAction {_ in
+          self.AuthDelegate?.signinTappedButtom()
+      }
+
+   
+    @objc func buttonTappedlogin () {
+        AuthDelegate?.loginTappedButtom()
+    }
     
     init(_ controller :T) {
         self.controller = controller
         super.init(frame:.zero)
-        
-          addSubview(logoLabel)
+  
+        addSubview(logoLabel)
         addSubview(TextFiledEmail)
         addSubview(textFiledPassword)
         addSubview(ımageLogo)
@@ -98,23 +110,27 @@ class LoginView<T:LoginVC>:UIView {
         addSubview(signinButtom)
         backgroundColor = UIColor.color1
         stupCompenent()
-        print("delete swift.yml")
+        
     }
     
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
     
+   
+   
     
        
 
     
 }
-#Preview {
-    LoginVC()
-}
-extension LoginView {
+
+extension AuthenticationView {
+
     func stupCompenent(){
+ 
+        
+        
         logoLabel.snp.makeConstraints({make in
             make.top.equalTo(100)
             make.centerX.equalToSuperview()

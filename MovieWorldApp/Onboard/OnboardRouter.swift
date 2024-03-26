@@ -9,6 +9,7 @@ import Foundation
 import UIKit
 protocol OnboardRouterProtocol {
     func navigateToLogin(from view:OnboardViewControllerProtocol?)
+   
     
 }
 final class OnboardRouter :OnboardRouterProtocol{
@@ -16,19 +17,19 @@ final class OnboardRouter :OnboardRouterProtocol{
     func navigateToLogin(from view: OnboardViewControllerProtocol?) {
         guard let viewController = view as? UIViewController else { return }
         viewController.navigationController?.navigationBar.tintColor = .white
-        viewController.navigationController?.pushViewController(LoginVC(), animated: true)
+        viewController.navigationController?.pushViewController(AuthenticationVC(), animated: true)
     }
     
     
     
-    static func craeteMyModule() -> OnboardMoveContoroller {
+    static func craeteMyModule() -> UIViewController {
                let view = OnboardMoveContoroller()
-              let rotuer = OnboardRouter()
-        let presenter = OnboardPresenter(
-        router: rotuer,
-        view: view
-        )
-        view.presenter = presenter
+        let rotuer:OnboardRouterProtocol = OnboardRouter()
+            let presenter = OnboardPresenter(
+                OnboardRouter:rotuer,
+                viewAuth: view)
+      
+        view.presenterOnboard = presenter
              return view
     }
     

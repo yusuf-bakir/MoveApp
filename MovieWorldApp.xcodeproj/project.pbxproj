@@ -18,12 +18,16 @@
 		F091EBDD2B9FBA4600A6A042 /* MovieWorldAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F091EBDC2B9FBA4600A6A042 /* MovieWorldAppTests.swift */; };
 		F091EBE72B9FBA4600A6A042 /* MovieWorldAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F091EBE62B9FBA4600A6A042 /* MovieWorldAppUITests.swift */; };
 		F091EBE92B9FBA4600A6A042 /* MovieWorldAppUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F091EBE82B9FBA4600A6A042 /* MovieWorldAppUITestsLaunchTests.swift */; };
+		F0A0A5892BADFA0100306897 /* AuthRoture.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0A0A5882BADFA0100306897 /* AuthRoture.swift */; };
+		F0A0A58B2BADFA1100306897 /* AuthPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0A0A58A2BADFA1100306897 /* AuthPresenter.swift */; };
+		F0A0A58D2BADFA3500306897 /* Entity.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0A0A58C2BADFA3500306897 /* Entity.swift */; };
+		F0A0A58F2BADFA7700306897 /* AuthInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0A0A58E2BADFA7700306897 /* AuthInteractor.swift */; };
 		F0A43D0D2BA98EB6007346B3 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = F0A43D0C2BA98EB6007346B3 /* Alamofire */; };
 		F0A43D0F2BA98EB6007346B3 /* AlamofireDynamic in Frameworks */ = {isa = PBXBuildFile; productRef = F0A43D0E2BA98EB6007346B3 /* AlamofireDynamic */; };
 		F0A43D132BA98F66007346B3 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0A43D122BA98F66007346B3 /* NetworkManager.swift */; };
 		F0A43D152BA9C1C8007346B3 /* NetworkHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0A43D142BA9C1C8007346B3 /* NetworkHelper.swift */; };
-		F0A43D192BA9C9DB007346B3 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0A43D182BA9C9DB007346B3 /* LoginView.swift */; };
-		F0A43D1B2BA9CCA3007346B3 /* LoginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0A43D1A2BA9CCA3007346B3 /* LoginVC.swift */; };
+		F0A43D192BA9C9DB007346B3 /* AuthenticationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0A43D182BA9C9DB007346B3 /* AuthenticationView.swift */; };
+		F0A43D1B2BA9CCA3007346B3 /* AuthenticationVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0A43D1A2BA9CCA3007346B3 /* AuthenticationVC.swift */; };
 		F0A43D1E2BAA0DF9007346B3 /* OnboardRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0A43D1D2BAA0DF9007346B3 /* OnboardRouter.swift */; };
 		F0A43D202BAA0E0B007346B3 /* OnboardPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0A43D1F2BAA0E0B007346B3 /* OnboardPresenter.swift */; };
 		F0CAEAF12BA2168900F2F5B9 /* OnboardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0CAEAF02BA2168900F2F5B9 /* OnboardView.swift */; };
@@ -73,10 +77,14 @@
 		F091EBE22B9FBA4600A6A042 /* MovieWorldAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MovieWorldAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		F091EBE62B9FBA4600A6A042 /* MovieWorldAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieWorldAppUITests.swift; sourceTree = "<group>"; };
 		F091EBE82B9FBA4600A6A042 /* MovieWorldAppUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieWorldAppUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		F0A0A5882BADFA0100306897 /* AuthRoture.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthRoture.swift; sourceTree = "<group>"; };
+		F0A0A58A2BADFA1100306897 /* AuthPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthPresenter.swift; sourceTree = "<group>"; };
+		F0A0A58C2BADFA3500306897 /* Entity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Entity.swift; sourceTree = "<group>"; };
+		F0A0A58E2BADFA7700306897 /* AuthInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthInteractor.swift; sourceTree = "<group>"; };
 		F0A43D122BA98F66007346B3 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
 		F0A43D142BA9C1C8007346B3 /* NetworkHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkHelper.swift; sourceTree = "<group>"; };
-		F0A43D182BA9C9DB007346B3 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
-		F0A43D1A2BA9CCA3007346B3 /* LoginVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginVC.swift; sourceTree = "<group>"; };
+		F0A43D182BA9C9DB007346B3 /* AuthenticationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationView.swift; sourceTree = "<group>"; };
+		F0A43D1A2BA9CCA3007346B3 /* AuthenticationVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationVC.swift; sourceTree = "<group>"; };
 		F0A43D1D2BAA0DF9007346B3 /* OnboardRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardRouter.swift; sourceTree = "<group>"; };
 		F0A43D1F2BAA0E0B007346B3 /* OnboardPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardPresenter.swift; sourceTree = "<group>"; };
 		F0CAEAF02BA2168900F2F5B9 /* OnboardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardView.swift; sourceTree = "<group>"; };
@@ -135,10 +143,10 @@
 		F091EBC42B9FBA4400A6A042 /* MovieWorldApp */ = {
 			isa = PBXGroup;
 			children = (
-				F0A43D172BA9C9C9007346B3 /* login */,
 				F091EBC72B9FBA4400A6A042 /* SceneDelegate.swift */,
 				F091EBC52B9FBA4400A6A042 /* AppDelegate.swift */,
 				F091EBC92B9FBA4400A6A042 /* ViewController.swift */,
+				F0A43D172BA9C9C9007346B3 /* LoginSigin */,
 				F091EBF52B9FBDDB00A6A042 /* Onboard */,
 				F0B5B3322BA4F5ED0057FE6F /* Home */,
 				F0B5B33A2BA4F7D00057FE6F /* Movie */,
@@ -179,11 +187,20 @@
 			isa = PBXGroup;
 			children = (
 				F07904702BA0C561000EA4B5 /* OnboardViewControler.swift */,
-				F0CAEAF02BA2168900F2F5B9 /* OnboardView.swift */,
 				F0A43D1D2BAA0DF9007346B3 /* OnboardRouter.swift */,
+				F0CAEAF02BA2168900F2F5B9 /* OnboardView.swift */,
 				F0A43D1F2BAA0E0B007346B3 /* OnboardPresenter.swift */,
 			);
 			path = Onboard;
+			sourceTree = "<group>";
+		};
+		F0A0A5902BADFAE100306897 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				F0A43D1A2BA9CCA3007346B3 /* AuthenticationVC.swift */,
+				F0A43D182BA9C9DB007346B3 /* AuthenticationView.swift */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 		F0A43D0B2BA98EB6007346B3 /* Frameworks */ = {
@@ -193,13 +210,16 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		F0A43D172BA9C9C9007346B3 /* login */ = {
+		F0A43D172BA9C9C9007346B3 /* LoginSigin */ = {
 			isa = PBXGroup;
 			children = (
-				F0A43D182BA9C9DB007346B3 /* LoginView.swift */,
-				F0A43D1A2BA9CCA3007346B3 /* LoginVC.swift */,
+				F0A0A5902BADFAE100306897 /* View */,
+				F0A0A5882BADFA0100306897 /* AuthRoture.swift */,
+				F0A0A58A2BADFA1100306897 /* AuthPresenter.swift */,
+				F0A0A58C2BADFA3500306897 /* Entity.swift */,
+				F0A0A58E2BADFA7700306897 /* AuthInteractor.swift */,
 			);
-			path = login;
+			path = LoginSigin;
 			sourceTree = "<group>";
 		};
 		F0B5B32E2BA4F5A00057FE6F /* NetworkManager */ = {
@@ -673,15 +693,19 @@
 			files = (
 				F0A43D152BA9C1C8007346B3 /* NetworkHelper.swift in Sources */,
 				F0A43D132BA98F66007346B3 /* NetworkManager.swift in Sources */,
+				F0A0A58F2BADFA7700306897 /* AuthInteractor.swift in Sources */,
+				F0A0A58D2BADFA3500306897 /* Entity.swift in Sources */,
+				F0A0A5892BADFA0100306897 /* AuthRoture.swift in Sources */,
 				F07904712BA0C561000EA4B5 /* OnboardViewControler.swift in Sources */,
 				F0CAEAF12BA2168900F2F5B9 /* OnboardView.swift in Sources */,
 				F091EBCA2B9FBA4400A6A042 /* ViewController.swift in Sources */,
-				F0A43D1B2BA9CCA3007346B3 /* LoginVC.swift in Sources */,
+				F0A43D1B2BA9CCA3007346B3 /* AuthenticationVC.swift in Sources */,
 				F091EBC62B9FBA4400A6A042 /* AppDelegate.swift in Sources */,
+				F0A0A58B2BADFA1100306897 /* AuthPresenter.swift in Sources */,
 				F091EBC82B9FBA4400A6A042 /* SceneDelegate.swift in Sources */,
 				F0A43D202BAA0E0B007346B3 /* OnboardPresenter.swift in Sources */,
 				F0A43D1E2BAA0DF9007346B3 /* OnboardRouter.swift in Sources */,
-				F0A43D192BA9C9DB007346B3 /* LoginView.swift in Sources */,
+				F0A43D192BA9C9DB007346B3 /* AuthenticationView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
