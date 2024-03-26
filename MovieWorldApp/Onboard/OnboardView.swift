@@ -12,7 +12,7 @@ protocol OnBoardViewProtocol {
     func onTappedContiuneButton()
 }
 
-class OnboardView <T: OnboardMove>:UIView{
+class OnboardView <T: OnboardMoveContoroller>:UIView{
     
     var delegate: OnBoardViewProtocol?
     let controler: T
@@ -50,7 +50,6 @@ class OnboardView <T: OnboardMove>:UIView{
     private lazy var profileImage : UIImageView = {
         let imageView = UIImageView()
         imageView.image = UIImage.camera
-    
         imageView.contentMode = .scaleAspectFit
         imageView.translatesAutoresizingMaskIntoConstraints = false
         return imageView
@@ -61,6 +60,7 @@ class OnboardView <T: OnboardMove>:UIView{
         label.text = "Filim Dünyasına Hoşgeldiniz. Filim ve dizileri HD kalitede izleyebilirsiniz."
         label.textColor = .white
         label.numberOfLines = 2
+        label.textAlignment = .center
 //        label.font = UIFont(name: "Bold", size: 24)
         label.font = UIFont.systemFont(ofSize: 15)
         return label
@@ -79,7 +79,7 @@ class OnboardView <T: OnboardMove>:UIView{
          self.controler = controller
          super.init(frame: .zero)
         
-        backgroundColor = .colorGray
+         backgroundColor = .color1
          addSubview(profileTitleLabel)
          addSubview(profileSubTitle )
          addSubview(profileImage)
