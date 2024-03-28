@@ -14,11 +14,13 @@ protocol AuthenticationPresenterProtocol {
     func navigatePage()
     func userAuthLogin(email:String,pasword:String ,complete:@escaping(String,Bool)->Void)
     func userAuthSıgın(email:String,pasword:String ,complete:@escaping(String,Bool)->Void)
-    
+
     
 }
 class AuthPresenter: AuthenticationPresenterProtocol{
     
+   
+   
     var ınteractor: AuthInteractorProtocol
     var router: AuthenticationRotureProtocol?
     var view: AuthenticationVCProtocol?
@@ -28,8 +30,6 @@ class AuthPresenter: AuthenticationPresenterProtocol{
         self.router = router
         self.view = view
     }
-    
-    
     func userAuthSıgın(email: String, pasword: String, complete: @escaping (String, Bool) -> Void) {
         ınteractor.loginUser(email: email, password: pasword, complete: { data ,error in
             

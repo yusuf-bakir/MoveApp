@@ -60,7 +60,8 @@ extension AuthenticationVC:AuthenticationViewProtocol {
     }
     
     func signinTappedButtom() {
-        presenterAuth?.navigatePage()
+        let secondViewController = SigninViewController()
+        navigationController?.pushViewController(secondViewController, animated: true)
         
     
     }
@@ -70,10 +71,13 @@ extension AuthenticationVC:AuthenticationViewProtocol {
             
         })
      
-//        presenterAuth?.navigatePage()
+      presenterAuth?.navigatePage()
     
       
     }
+    @objc func dismissSelf() {
+            self.dismiss(animated: true, completion: nil)
+        }
     
     
 }

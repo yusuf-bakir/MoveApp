@@ -50,6 +50,7 @@ protocol AuthenticationViewProtocol:AnyObject {
         let textInput = UITextField()
         textInput.borderStyle = .bezel
         textInput.textColor = .white
+        textInput.isSecureTextEntry = true
         let attributes: [NSAttributedString.Key: Any] = [
             .foregroundColor: UIColor.gray, //Yeni renk burada ayarlanabilir
             .font: UIFont.systemFont(ofSize: 16) ]
@@ -173,7 +174,7 @@ protocol AuthenticationViewProtocol:AnyObject {
 
 extension AuthenticationView {
 
-    func stupCompenent(){
+       private func stupCompenent(){
  
         
         
