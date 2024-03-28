@@ -14,7 +14,7 @@ protocol AuthenticationRotureProtocol {
 
     
 }
-class AuthenticationRoture :AuthenticationRotureProtocol {
+final class AuthenticationRoture :AuthenticationRotureProtocol {
     func navigateToHome(from view: AuthenticationVCProtocol?) {
         guard let viewController = view as? UIViewController else { return }
         viewController.navigationController?.navigationBar.tintColor = .white
@@ -22,9 +22,13 @@ class AuthenticationRoture :AuthenticationRotureProtocol {
     }
     
     static func start(ref: AuthenticationVC) {
+        var ınteractor  = AuthInteractor()
         let router = AuthenticationRoture()
-        let presenter = AuthPresenter(router:router ,view:ref )
+        let presenter = AuthPresenter(ınteractor: ınteractor, router:router ,view:ref )
         ref.presenterAuth = presenter
+        
+              
+    
         
     }
     

@@ -10,11 +10,12 @@ protocol AuthenticationVCProtocol :AnyObject{
    
     var presenterAuth :AuthenticationPresenterProtocol? { get set }
 }
-
-class AuthenticationVC: UIViewController, UINavigationControllerDelegate,AuthenticationVCProtocol {
-
-    var presenterAuth :AuthenticationPresenterProtocol?
-   
+       
+     final class AuthenticationVC: UIViewController, UINavigationControllerDelegate,AuthenticationVCProtocol {
+           var presenterAuth :AuthenticationPresenterProtocol?
+           var AuthDelegate:AuthenticationViewProtocol?
+        private var passwordText = ""
+        private var emailText =  ""
      override func loadView() {
         let authentication = AuthenticationView(self)
         view = authentication
@@ -26,6 +27,8 @@ class AuthenticationVC: UIViewController, UINavigationControllerDelegate,Authent
     override func viewDidLoad() {
         super.viewDidLoad()
         AuthenticationRoture.start(ref: self)
+       
+    
         
        
     }
@@ -35,18 +38,40 @@ class AuthenticationVC: UIViewController, UINavigationControllerDelegate,Authent
     
 
 extension AuthenticationVC:AuthenticationViewProtocol {
-    func signinTappedButtom() {
+    func passwordInput(_ text: String) -> String {
+        passwordText = text
+        return passwordText
+    }
     
+    func emailInput(_ text: String) -> String {
+        emailText = text
+        return emailText
+    }
+    
+    func labelTapp() {
+        print("label tapp")
+        
+    }
+    
+
+   
+    func animationImage() {
+   
+    }
+    
+    func signinTappedButtom() {
         presenterAuth?.navigatePage()
         
-       
     
     }
     
     func loginTappedButtom() {
-       
-        presenterAuth?.navigatePage()
-      
+        presenterAuth?.userAuthLogin(email: emailText, pasword: passwordText, complete: { message,error in 
+            
+        })
+     
+//        presenterAuth?.navigatePage()
+    
       
     }
     
