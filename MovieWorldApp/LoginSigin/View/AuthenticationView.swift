@@ -11,23 +11,41 @@ import SnapKit
 
 protocol AuthenticationViewProtocol:AnyObject {
     func signinTappedButtom()
+    
     func loginTappedButtom ()
+    
+    func animationImage()
+    
+    func passwordInput(_ text: String) ->String
+    
+    func emailInput(_ text: String) ->String
+    
+    func labelTapp()
+     
+
 }
    
   class AuthenticationView<T:AuthenticationVC>:UIView {
     var controller :T
     weak var AuthDelegate:AuthenticationViewProtocol?
-    
+      
+      
+      
+      // MARK: - logoLabel
     private lazy var logoLabel : UILabel =  {
         let label = UILabel()
         label.text = "Cinema+"
         label.font = UIFont.boldSystemFont(ofSize: 30)
         label.textColor = .white
+        
         return label
     
     }()
+      @objc func labelTapped(_ sender: UITapGestureRecognizer) {
+          AuthDelegate?.labelTapp()
+          }
     
-    
+      // MARK: - textFiledPassword
     private lazy var textFiledPassword :UITextField = {
         let textInput = UITextField()
         textInput.borderStyle = .bezel
@@ -36,10 +54,18 @@ protocol AuthenticationViewProtocol:AnyObject {
             .foregroundColor: UIColor.gray, //Yeni renk burada ayarlanabilir
             .font: UIFont.systemFont(ofSize: 16) ]
         textInput.attributedPlaceholder = NSAttributedString(string: "Password", attributes: attributes)
+        textInput.addTarget(self, action: #selector(textFieldDidChangePassword(_:)), for: .editingChanged)
         return textInput
     }()
+      
+      @objc func textFieldDidChangePassword(_ textField: UITextField) {
+              if let text = textField.text {
+                  self.AuthDelegate?.emailInput(text)
+              
+              }
+          }
     
-    
+      // MARK: - TextFiledEmail
     
     private lazy var TextFiledEmail:UITextField = {
         let textInput = UITextField()
@@ -50,9 +76,23 @@ protocol AuthenticationViewProtocol:AnyObject {
             .foregroundColor: UIColor.gray, //Yeni renk burada ayarlanabilir
                     .font: UIFont.systemFont(ofSize: 16) ]
         textInput.attributedPlaceholder = NSAttributedString(string: "Enter your email", attributes: attributes)
-        
+        textInput.addTarget(self, action: #selector(textFieldDidChangeEmail(_:)), for: .editingChanged)
        return textInput
     }()
+      
+      // MARK: - textFieldDidChangeEmail
+      
+      @objc func textFieldDidChangeEmail(_ textField: UITextField) {
+              if let text = textField.text {
+                  
+                  AuthDelegate?.emailInput(text)
+              }
+          }
+    
+    
+
+      // MARK: - View ımageLogo
+      
     private lazy var ımageLogo :UIImageView = {
        let ımage = UIImageView()
         ımage.image = UIImage.play
@@ -60,6 +100,7 @@ protocol AuthenticationViewProtocol:AnyObject {
         ımage.translatesAutoresizingMaskIntoConstraints = false
               return ımage
     }()
+      // MARK: - View registerLabel
     private lazy var  registerLabel : UILabel = {
         let label = UILabel()
         label.text = "Forgot your Password ?"
@@ -67,6 +108,7 @@ protocol AuthenticationViewProtocol:AnyObject {
         label.isUserInteractionEnabled = true
         return label
     }()
+      // MARK: - View loginButtom
     private lazy var loginButtom:UIButton = {
         let buttom = UIButton()
         buttom.setTitle("Login", for: .normal)
@@ -78,9 +120,10 @@ protocol AuthenticationViewProtocol:AnyObject {
 
      return buttom
     }()
+      // MARK: - View signinButtom
     private lazy var signinButtom:UIButton = {
         let buttom = UIButton()
-        buttom.setTitle("Signin", for: .normal)
+        buttom.setTitle("Sign in", for: .normal)
         buttom.setTitleColor(.white, for: .normal)
         buttom.backgroundColor = .red
         buttom.translatesAutoresizingMaskIntoConstraints = false
@@ -88,19 +131,20 @@ protocol AuthenticationViewProtocol:AnyObject {
         buttom.addAction(action, for: .touchUpInside)
      return buttom
     }()
+      // MARK: - Buttom action
       lazy var action : UIAction = UIAction {_ in
           self.AuthDelegate?.signinTappedButtom()
       }
-
-   
+  
+      
     @objc func buttonTappedlogin () {
         AuthDelegate?.loginTappedButtom()
     }
-    
+      // MARK: - init
     init(_ controller :T) {
         self.controller = controller
         super.init(frame:.zero)
-  
+        
         addSubview(logoLabel)
         addSubview(TextFiledEmail)
         addSubview(textFiledPassword)
@@ -110,7 +154,9 @@ protocol AuthenticationViewProtocol:AnyObject {
         addSubview(signinButtom)
         backgroundColor = UIColor.color1
         stupCompenent()
-        
+        let tapGesture = UITapGestureRecognizer(target: self, action: #selector(labelTapped))
+        logoLabel.isUserInteractionEnabled = true
+        logoLabel.addGestureRecognizer(tapGesture)
     }
     
     required init?(coder: NSCoder) {

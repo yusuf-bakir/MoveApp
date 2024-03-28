@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		F01758DF2BB4EE1900896E03 /* FirbaseRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = F01758DE2BB4EE1900896E03 /* FirbaseRepository.swift */; };
+		F01758E22BB4FC8600896E03 /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = F01758E12BB4FC8600896E03 /* FirebaseAuth */; };
+		F01758E42BB4FC8600896E03 /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = F01758E32BB4FC8600896E03 /* FirebaseFirestore */; };
+		F01758E62BB4FC8600896E03 /* FirebaseMessaging in Frameworks */ = {isa = PBXBuildFile; productRef = F01758E52BB4FC8600896E03 /* FirebaseMessaging */; };
 		F079046D2BA093E2000EA4B5 /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = F079046C2BA093E2000EA4B5 /* SnapKit */; };
 		F079046F2BA093E2000EA4B5 /* SnapKit-Dynamic in Frameworks */ = {isa = PBXBuildFile; productRef = F079046E2BA093E2000EA4B5 /* SnapKit-Dynamic */; };
 		F07904712BA0C561000EA4B5 /* OnboardViewControler.swift in Sources */ = {isa = PBXBuildFile; fileRef = F07904702BA0C561000EA4B5 /* OnboardViewControler.swift */; };
@@ -64,6 +68,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		F01758DE2BB4EE1900896E03 /* FirbaseRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirbaseRepository.swift; sourceTree = "<group>"; };
 		F07904702BA0C561000EA4B5 /* OnboardViewControler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardViewControler.swift; sourceTree = "<group>"; };
 		F091EBC22B9FBA4400A6A042 /* MovieWorldApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MovieWorldApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F091EBC52B9FBA4400A6A042 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -96,9 +101,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				F0A43D0D2BA98EB6007346B3 /* Alamofire in Frameworks */,
+				F01758E22BB4FC8600896E03 /* FirebaseAuth in Frameworks */,
+				F01758E62BB4FC8600896E03 /* FirebaseMessaging in Frameworks */,
 				F0A43D0F2BA98EB6007346B3 /* AlamofireDynamic in Frameworks */,
 				F079046D2BA093E2000EA4B5 /* SnapKit in Frameworks */,
 				F079046F2BA093E2000EA4B5 /* SnapKit-Dynamic in Frameworks */,
+				F01758E42BB4FC8600896E03 /* FirebaseFirestore in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -218,6 +226,7 @@
 				F0A0A58A2BADFA1100306897 /* AuthPresenter.swift */,
 				F0A0A58C2BADFA3500306897 /* Entity.swift */,
 				F0A0A58E2BADFA7700306897 /* AuthInteractor.swift */,
+				F01758DE2BB4EE1900896E03 /* FirbaseRepository.swift */,
 			);
 			path = LoginSigin;
 			sourceTree = "<group>";
@@ -572,6 +581,9 @@
 				F079046E2BA093E2000EA4B5 /* SnapKit-Dynamic */,
 				F0A43D0C2BA98EB6007346B3 /* Alamofire */,
 				F0A43D0E2BA98EB6007346B3 /* AlamofireDynamic */,
+				F01758E12BB4FC8600896E03 /* FirebaseAuth */,
+				F01758E32BB4FC8600896E03 /* FirebaseFirestore */,
+				F01758E52BB4FC8600896E03 /* FirebaseMessaging */,
 			);
 			productName = MovieWorldApp;
 			productReference = F091EBC22B9FBA4400A6A042 /* MovieWorldApp.app */;
@@ -648,6 +660,7 @@
 			packageReferences = (
 				F07904662BA093C5000EA4B5 /* XCRemoteSwiftPackageReference "Alamofire" */,
 				F079046B2BA093E2000EA4B5 /* XCRemoteSwiftPackageReference "SnapKit" */,
+				F01758E02BB4FC8600896E03 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
 			);
 			productRefGroup = F091EBC32B9FBA4400A6A042 /* Products */;
 			projectDirPath = "";
@@ -705,6 +718,7 @@
 				F091EBC82B9FBA4400A6A042 /* SceneDelegate.swift in Sources */,
 				F0A43D202BAA0E0B007346B3 /* OnboardPresenter.swift in Sources */,
 				F0A43D1E2BAA0DF9007346B3 /* OnboardRouter.swift in Sources */,
+				F01758DF2BB4EE1900896E03 /* FirbaseRepository.swift in Sources */,
 				F0A43D192BA9C9DB007346B3 /* AuthenticationView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1040,6 +1054,14 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		F01758E02BB4FC8600896E03 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/firebase/firebase-ios-sdk.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 10.23.0;
+			};
+		};
 		F07904662BA093C5000EA4B5 /* XCRemoteSwiftPackageReference "Alamofire" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/Alamofire/Alamofire.git";
@@ -1059,6 +1081,21 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		F01758E12BB4FC8600896E03 /* FirebaseAuth */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = F01758E02BB4FC8600896E03 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAuth;
+		};
+		F01758E32BB4FC8600896E03 /* FirebaseFirestore */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = F01758E02BB4FC8600896E03 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseFirestore;
+		};
+		F01758E52BB4FC8600896E03 /* FirebaseMessaging */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = F01758E02BB4FC8600896E03 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseMessaging;
+		};
 		F079046C2BA093E2000EA4B5 /* SnapKit */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = F079046B2BA093E2000EA4B5 /* XCRemoteSwiftPackageReference "SnapKit" */;
