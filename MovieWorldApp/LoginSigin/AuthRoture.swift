@@ -11,13 +11,19 @@ import UIKit
 protocol AuthenticationRotureProtocol {
    func navigateToHome(from view :AuthenticationVCProtocol?)
     static func start(ref : AuthenticationVC)
+  
+        
+    
 
     
 }
 final class AuthenticationRoture :AuthenticationRotureProtocol {
+    
+    
     func navigateToHome(from view: AuthenticationVCProtocol?) {
         guard let viewController = view as? UIViewController else { return }
         viewController.navigationController?.navigationBar.tintColor = .white
+        viewController.navigationController?.navigationBar.isHidden = true
         viewController.navigationController?.pushViewController(ViewController(), animated: true)
     }
     
