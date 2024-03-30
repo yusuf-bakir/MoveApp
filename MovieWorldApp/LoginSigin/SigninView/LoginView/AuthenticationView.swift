@@ -11,24 +11,16 @@ import SnapKit
 
 protocol AuthenticationViewProtocol:AnyObject {
     func signinTappedButtom()
-    
     func loginTappedButtom ()
-    
-    func animationImage()
-    
     func passwordInput(_ text: String) ->String
-    
     func emailInput(_ text: String) ->String
-    
     func labelTapp()
-     
-
 }
    
   class AuthenticationView<T:AuthenticationVC>:UIView {
     var controller :T
     weak var AuthDelegate:AuthenticationViewProtocol?
-      
+     
       
       
       // MARK: - logoLabel
@@ -42,7 +34,7 @@ protocol AuthenticationViewProtocol:AnyObject {
     
     }()
       @objc func labelTapped(_ sender: UITapGestureRecognizer) {
-          AuthDelegate?.labelTapp()
+        
           }
     
       // MARK: - textFiledPassword
@@ -61,7 +53,7 @@ protocol AuthenticationViewProtocol:AnyObject {
       
       @objc func textFieldDidChangePassword(_ textField: UITextField) {
               if let text = textField.text {
-                  self.AuthDelegate?.emailInput(text)
+                  self.AuthDelegate?.passwordInput(text)
               
               }
           }
@@ -99,8 +91,22 @@ protocol AuthenticationViewProtocol:AnyObject {
         ımage.image = UIImage.play
         ımage.contentMode = .scaleAspectFit
         ımage.translatesAutoresizingMaskIntoConstraints = false
+     
+
+        ımage.isUserInteractionEnabled = true
               return ımage
     }()
+      // MARK: - View Image for animation 
+      func animateImage() {
+          UIView.animate(withDuration: 0.5,delay: 0.0,options: [.repeat,.autoreverse], animations: {
+                  self.ımageLogo.transform = CGAffineTransform(scaleX: 0.8, y: 0.8)
+              }) { _ in
+                  UIView.animate(withDuration: 0.5) {
+                      self.ımageLogo.transform = CGAffineTransform.identity
+                  }
+              }
+          }
+  
       // MARK: - View registerLabel
     private lazy var  registerLabel : UILabel = {
         let label = UILabel()
@@ -144,8 +150,9 @@ protocol AuthenticationViewProtocol:AnyObject {
       // MARK: - init
     init(_ controller :T) {
         self.controller = controller
+            
         super.init(frame:.zero)
-        
+        self.animateImage()
         addSubview(logoLabel)
         addSubview(TextFiledEmail)
         addSubview(textFiledPassword)
