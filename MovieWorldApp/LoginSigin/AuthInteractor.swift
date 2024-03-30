@@ -6,21 +6,28 @@
 //
 
 import Foundation
+import Firebase
 protocol AuthInteractorProtocol {
-    func loginUser(email: String, password: String, complete: @escaping (String?, Error) ->Void)
-    func signIn(email: String, password: String, complete: @escaping (String?, Error) -> Void)
+    func loginUser(email: String, password: String)
+   
     var ınteractorTopresenter :  AuthenticationPresenterProtocol? {get set}
    
 }
-class AuthInteractor :AuthInteractorProtocol,UserNetworkProtolocol{
-    func loginUser(email: String, password: String, complete: @escaping (String?, Error) -> Void) {
-        print("login fonksiyonu çalıştı")
-    }
-    
-    func signIn(email: String, password: String, complete: @escaping (String?, Error) -> Void) {
+class AuthInteractor :AuthInteractorProtocol{
+    func loginUser(email: String, password: String) {
+        Auth.auth().signIn(withEmail: email, password: password) { (authResponse,error) in
+            if error != nil {
+                self.ınteractorTopresenter?.loginFailed(withError: error?.localizedDescription ?? "" )
+            }else{
+                self.ınteractorTopresenter?.loginSuccessfull()
+                
+            }
+            
+        }
         
     }
     
+
     var ınteractorTopresenter: AuthenticationPresenterProtocol?
     
     

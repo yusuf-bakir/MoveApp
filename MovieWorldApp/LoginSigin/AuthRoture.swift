@@ -32,6 +32,10 @@ final class AuthenticationRoture :AuthenticationRotureProtocol {
         let router = AuthenticationRoture()
         let presenter = AuthPresenter(ınteractor: ınteractor, router:router ,view:ref )
         ref.presenterAuth = presenter
+       
+        ref.presenterAuth?.ınteractor = ınteractor
+        ref.presenterAuth?.ınteractor.ınteractorTopresenter = presenter
+        
         
               
     

@@ -7,11 +7,14 @@
 
 import UIKit
 protocol AuthenticationVCProtocol :AnyObject{
+    func showError(message: String)
    
     var presenterAuth :AuthenticationPresenterProtocol? { get set }
 }
        
-     final class AuthenticationVC: UIViewController, UINavigationControllerDelegate,AuthenticationVCProtocol {
+final class AuthenticationVC: UIViewController, UINavigationControllerDelegate {
+
+    
            var presenterAuth :AuthenticationPresenterProtocol?
            var AuthDelegate:AuthenticationViewProtocol?
         private var passwordText = ""
@@ -40,12 +43,16 @@ protocol AuthenticationVCProtocol :AnyObject{
 extension AuthenticationVC:AuthenticationViewProtocol {
     func passwordInput(_ text: String) -> String {
         passwordText = text
+        print(passwordText)
         return passwordText
+           
     }
     
     func emailInput(_ text: String) -> String {
         emailText = text
+        print(emailText)
         return emailText
+       
     }
     
     func labelTapp() {
@@ -67,17 +74,20 @@ extension AuthenticationVC:AuthenticationViewProtocol {
     }
     
     func loginTappedButtom() {
-        presenterAuth?.userAuthLogin(email: emailText, pasword: passwordText, complete: { message,error in 
-            
-        })
-     
-      presenterAuth?.navigatePage()
-    
+       
+        presenterAuth?.loginUser(email: emailText, password: passwordText)
       
     }
-    @objc func dismissSelf() {
-            self.dismiss(animated: true, completion: nil)
-        }
+    
+    
+}
+extension AuthenticationVC:AuthenticationVCProtocol {
+    func showError(message: String) {
+   let showErrorLogin = addAlert(title: "Uyarı", message: message)
+        present(showErrorLogin, animated: true, completion: nil)
+        
+    }
+    
     
     
 }
