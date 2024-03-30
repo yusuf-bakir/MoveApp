@@ -10,6 +10,11 @@
 		F056DB022BB5F18300333A28 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = F056DB012BB5F18200333A28 /* GoogleService-Info.plist */; };
 		F056DB042BB5F35600333A28 /* AuthSigin.swift in Sources */ = {isa = PBXBuildFile; fileRef = F056DB032BB5F35600333A28 /* AuthSigin.swift */; };
 		F056DB072BB5F3BF00333A28 /* SigninViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F056DB062BB5F3BF00333A28 /* SigninViewController.swift */; };
+		F05EB8F72BB8BBF4001FC6FE /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F05EB8F62BB8BBF4001FC6FE /* HomeView.swift */; };
+		F05EB8F92BB8BC09001FC6FE /* HomeInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = F05EB8F82BB8BC09001FC6FE /* HomeInteractor.swift */; };
+		F05EB8FB2BB8BC16001FC6FE /* HomeRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = F05EB8FA2BB8BC16001FC6FE /* HomeRouter.swift */; };
+		F05EB8FD2BB8BC1F001FC6FE /* HomePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = F05EB8FC2BB8BC1F001FC6FE /* HomePresenter.swift */; };
+		F05EB8FF2BB8BC2C001FC6FE /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F05EB8FE2BB8BC2C001FC6FE /* HomeViewController.swift */; };
 		F079046D2BA093E2000EA4B5 /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = F079046C2BA093E2000EA4B5 /* SnapKit */; };
 		F079046F2BA093E2000EA4B5 /* SnapKit-Dynamic in Frameworks */ = {isa = PBXBuildFile; productRef = F079046E2BA093E2000EA4B5 /* SnapKit-Dynamic */; };
 		F07904712BA0C561000EA4B5 /* OnboardViewControler.swift in Sources */ = {isa = PBXBuildFile; fileRef = F07904702BA0C561000EA4B5 /* OnboardViewControler.swift */; };
@@ -74,6 +79,11 @@
 		F056DB012BB5F18200333A28 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		F056DB032BB5F35600333A28 /* AuthSigin.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthSigin.swift; sourceTree = "<group>"; };
 		F056DB062BB5F3BF00333A28 /* SigninViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SigninViewController.swift; sourceTree = "<group>"; };
+		F05EB8F62BB8BBF4001FC6FE /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		F05EB8F82BB8BC09001FC6FE /* HomeInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeInteractor.swift; sourceTree = "<group>"; };
+		F05EB8FA2BB8BC16001FC6FE /* HomeRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeRouter.swift; sourceTree = "<group>"; };
+		F05EB8FC2BB8BC1F001FC6FE /* HomePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePresenter.swift; sourceTree = "<group>"; };
+		F05EB8FE2BB8BC2C001FC6FE /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		F07904702BA0C561000EA4B5 /* OnboardViewControler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardViewControler.swift; sourceTree = "<group>"; };
 		F091EBC22B9FBA4400A6A042 /* MovieWorldApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MovieWorldApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F091EBC52B9FBA4400A6A042 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -544,6 +554,7 @@
 		F0B5B3542BA4F9A50057FE6F /* Presenter */ = {
 			isa = PBXGroup;
 			children = (
+				F05EB8FC2BB8BC1F001FC6FE /* HomePresenter.swift */,
 			);
 			path = Presenter;
 			sourceTree = "<group>";
@@ -551,6 +562,7 @@
 		F0B5B3552BA4F9AB0057FE6F /* Rotuer */ = {
 			isa = PBXGroup;
 			children = (
+				F05EB8FA2BB8BC16001FC6FE /* HomeRouter.swift */,
 			);
 			path = Rotuer;
 			sourceTree = "<group>";
@@ -558,6 +570,7 @@
 		F0B5B3562BA4F9B10057FE6F /* Interactor */ = {
 			isa = PBXGroup;
 			children = (
+				F05EB8F82BB8BC09001FC6FE /* HomeInteractor.swift */,
 			);
 			path = Interactor;
 			sourceTree = "<group>";
@@ -565,6 +578,8 @@
 		F0B5B3572BA4F9BC0057FE6F /* View */ = {
 			isa = PBXGroup;
 			children = (
+				F05EB8F62BB8BBF4001FC6FE /* HomeView.swift */,
+				F05EB8FE2BB8BC2C001FC6FE /* HomeViewController.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -725,8 +740,10 @@
 				F0A43D152BA9C1C8007346B3 /* NetworkHelper.swift in Sources */,
 				F0A43D132BA98F66007346B3 /* NetworkManager.swift in Sources */,
 				F0A0A58F2BADFA7700306897 /* AuthInteractor.swift in Sources */,
+				F05EB8F92BB8BC09001FC6FE /* HomeInteractor.swift in Sources */,
 				F0A0A58D2BADFA3500306897 /* Entity.swift in Sources */,
 				F0A0A5892BADFA0100306897 /* AuthRoture.swift in Sources */,
+				F05EB8FF2BB8BC2C001FC6FE /* HomeViewController.swift in Sources */,
 				F07904712BA0C561000EA4B5 /* OnboardViewControler.swift in Sources */,
 				F0CAEAF12BA2168900F2F5B9 /* OnboardView.swift in Sources */,
 				F091EBCA2B9FBA4400A6A042 /* ViewController.swift in Sources */,
@@ -737,9 +754,12 @@
 				F0A6C9A62BB74CD800FF0B9A /* AlertMessage.swift in Sources */,
 				F0A0A58B2BADFA1100306897 /* AuthPresenter.swift in Sources */,
 				F091EBC82B9FBA4400A6A042 /* SceneDelegate.swift in Sources */,
+				F05EB8FB2BB8BC16001FC6FE /* HomeRouter.swift in Sources */,
 				F0A43D202BAA0E0B007346B3 /* OnboardPresenter.swift in Sources */,
 				F0A43D1E2BAA0DF9007346B3 /* OnboardRouter.swift in Sources */,
 				F0A43D192BA9C9DB007346B3 /* AuthenticationView.swift in Sources */,
+				F05EB8F72BB8BBF4001FC6FE /* HomeView.swift in Sources */,
+				F05EB8FD2BB8BC1F001FC6FE /* HomePresenter.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
