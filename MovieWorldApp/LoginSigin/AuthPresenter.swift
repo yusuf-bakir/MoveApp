@@ -11,17 +11,29 @@ protocol AuthenticationPresenterProtocol {
     var view: AuthenticationVCProtocol? { get set }
     var router:AuthenticationRotureProtocol? {get set}
     var ınteractor :AuthInteractorProtocol {get set}
-    func navigatePage()
-    func userAuthLogin(email:String,pasword:String ,complete:@escaping(String,Bool)->Void)
-    func userAuthSıgın(email:String,pasword:String ,complete:@escaping(String,Bool)->Void)
-
+  
+    func loginUser (email:String,password:String)
+    func loginFailed(withError : String)
+    func loginSuccessfull()
+ 
     
 }
 class AuthPresenter: AuthenticationPresenterProtocol{
-    
-   
-   
     var ınteractor: AuthInteractorProtocol
+    
+    func loginSuccessfull() {
+        router?.navigateToHome(from: self.view)
+    }
+    
+    func loginUser(email: String, password: String) {
+        print("ınteractor login user")
+        ınteractor.loginUser(email: email, password: password)
+    }
+    
+    func loginFailed(withError: String) {
+        view?.showError(message: withError)
+    }
+
     var router: AuthenticationRotureProtocol?
     var view: AuthenticationVCProtocol?
 
@@ -30,32 +42,14 @@ class AuthPresenter: AuthenticationPresenterProtocol{
         self.router = router
         self.view = view
     }
-    func userAuthSıgın(email: String, pasword: String, complete: @escaping (String, Bool) -> Void) {
-        ınteractor.loginUser(email: email, password: pasword, complete: { data ,error in
-            
-            
-            
-        })
-    }
-    
+   
 
-    
-    func userAuthLogin(email: String, pasword: String, complete: @escaping (String, Bool) -> Void) {
-        ınteractor.loginUser(email: email, password: pasword, complete: { data,error  in
-            
-        })
-    }
-    
 
-    func navigatePage() {
-        print("navigatePage çalıştı")
-        router?.navigateToHome(from: self.view)
-       
-        
+ 
     }
      
         
-    }
+        
 
     
     
