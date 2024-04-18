@@ -7,6 +7,7 @@
 
 import Foundation
 import UIKit
+import SnapKit
 protocol HomeViewProtocol{
     
     
@@ -23,6 +24,10 @@ final class HomeView<T:HomeViewController>:UIView{
     init(_ controller: T) {
         self.controller = controller
         super.init(frame: .zero)
+
+        backgroundColor = .white
+
+        
         
         
     }
@@ -30,4 +35,7 @@ final class HomeView<T:HomeViewController>:UIView{
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
+}
+extension HomeView {
+
 }

@@ -24,11 +24,11 @@ final class AuthenticationRoture :AuthenticationRotureProtocol {
         guard let viewController = view as? UIViewController else { return }
         viewController.navigationController?.navigationBar.tintColor = .white
         viewController.navigationController?.navigationBar.isHidden = true
-        viewController.navigationController?.pushViewController(ViewController(), animated: true)
+        viewController.navigationController?.pushViewController(TabbarViewController(), animated: true) 
     }
     
     static func start(ref: AuthenticationVC) {
-        var ınteractor  = AuthInteractor()
+        let ınteractor  = AuthInteractor()
         let router = AuthenticationRoture()
         let presenter = AuthPresenter(ınteractor: ınteractor, router:router ,view:ref )
         ref.presenterAuth = presenter

@@ -20,7 +20,13 @@ protocol AuthSıgnviewProtocol:AnyObject {
 final class AuthSigin<T:SigninViewController> :UIView{
    weak  var authDelegateSigin:AuthSıgnviewProtocol?
       var controller : T
-    
+    private lazy var label : UILabel  = {
+       let textLabel = UILabel()
+        textLabel.text = "Cinema +"
+        textLabel.font = UIFont.boldSystemFont(ofSize: 30)
+        textLabel.textColor = .white
+        return textLabel
+    }()
     
      private lazy var registerEmail: UITextField = {
              let textInput = UITextField()
@@ -103,6 +109,7 @@ final class AuthSigin<T:SigninViewController> :UIView{
         addSubview(registerPassword)
         addSubview(repeatPassword)
         addSubview(siginUpBottom)
+        addSubview(label)
             setup()
         backgroundColor = UIColor.color1
     }
@@ -120,7 +127,7 @@ final class AuthSigin<T:SigninViewController> :UIView{
 extension AuthSigin {
     private func setup() {
         registerEmail.snp.makeConstraints({ make in
-            make.top.equalToSuperview().offset(200) // Üst kenardan 200 birim uzaklık
+            make.top.equalTo(self.label.snp.bottom).offset(30) // Üst kenardan 200 birim uzaklık
             make.leading.equalTo(self.safeAreaLayoutGuide).offset(20)
             make.trailing.equalTo(self.safeAreaLayoutGuide).offset(-20)
             make.centerX.equalToSuperview()
@@ -150,7 +157,12 @@ extension AuthSigin {
           
             
         })
-        
+        label.snp.makeConstraints({ make in
+            make.leadingMargin.equalToSuperview().offset(20)
+            make.top.equalTo(200)
+            
+        })
     }
     
+   
 }
