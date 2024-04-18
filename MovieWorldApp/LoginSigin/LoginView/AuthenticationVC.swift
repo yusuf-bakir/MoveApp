@@ -90,7 +90,9 @@ extension AuthenticationVC:AuthenticationViewProtocol {
     
     func loginTappedButtom() {
        
-        presenterAuth?.loginUser(email: emailText, password: passwordText)
+//        presenterAuth?.loginUser(email: emailText, password: passwordText)
+        presenterAuth?.loginSuccessfull()
+        
       
     }
     

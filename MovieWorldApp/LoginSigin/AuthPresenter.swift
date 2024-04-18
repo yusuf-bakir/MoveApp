@@ -36,7 +36,7 @@ class AuthPresenter: AuthenticationPresenterProtocol{
 
     var router: AuthenticationRotureProtocol?
     var view: AuthenticationVCProtocol?
-
+     
     init(ınteractor: AuthInteractorProtocol, router: AuthenticationRotureProtocol? = nil, view: AuthenticationVCProtocol? = nil) {
         self.ınteractor = ınteractor
         self.router = router

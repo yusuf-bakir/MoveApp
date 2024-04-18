@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		F00386232BBC79EB00BCB7A6 /* TabbarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F00386222BBC79EB00BCB7A6 /* TabbarViewController.swift */; };
+		F00386252BBC7AE300BCB7A6 /* PeopleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F00386242BBC7AE300BCB7A6 /* PeopleViewController.swift */; };
 		F056DB022BB5F18300333A28 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = F056DB012BB5F18200333A28 /* GoogleService-Info.plist */; };
 		F056DB042BB5F35600333A28 /* AuthSigin.swift in Sources */ = {isa = PBXBuildFile; fileRef = F056DB032BB5F35600333A28 /* AuthSigin.swift */; };
 		F056DB072BB5F3BF00333A28 /* SigninViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F056DB062BB5F3BF00333A28 /* SigninViewController.swift */; };
@@ -76,6 +78,8 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		F00386222BBC79EB00BCB7A6 /* TabbarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabbarViewController.swift; sourceTree = "<group>"; };
+		F00386242BBC7AE300BCB7A6 /* PeopleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PeopleViewController.swift; sourceTree = "<group>"; };
 		F056DB012BB5F18200333A28 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		F056DB032BB5F35600333A28 /* AuthSigin.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthSigin.swift; sourceTree = "<group>"; };
 		F056DB062BB5F3BF00333A28 /* SigninViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SigninViewController.swift; sourceTree = "<group>"; };
@@ -148,7 +152,6 @@
 			children = (
 				F056DB032BB5F35600333A28 /* AuthSigin.swift */,
 				F056DB062BB5F3BF00333A28 /* SigninViewController.swift */,
-				F0A0A5902BADFAE100306897 /* LoginView */,
 			);
 			path = SigninView;
 			sourceTree = "<group>";
@@ -248,6 +251,7 @@
 		F0A43D172BA9C9C9007346B3 /* LoginSigin */ = {
 			isa = PBXGroup;
 			children = (
+				F0A0A5902BADFAE100306897 /* LoginView */,
 				F056DB052BB5F38E00333A28 /* SigninView */,
 				F0A0A5882BADFA0100306897 /* AuthRoture.swift */,
 				F0A0A58A2BADFA1100306897 /* AuthPresenter.swift */,
@@ -269,6 +273,7 @@
 		F0B5B32F2BA4F5AF0057FE6F /* TabBar */ = {
 			isa = PBXGroup;
 			children = (
+				F00386222BBC79EB00BCB7A6 /* TabbarViewController.swift */,
 			);
 			path = TabBar;
 			sourceTree = "<group>";
@@ -335,6 +340,7 @@
 				F0B5B34C2BA4F9310057FE6F /* Interactor */,
 				F0B5B34B2BA4F9270057FE6F /* Presenter */,
 				F0B5B34A2BA4F9220057FE6F /* View */,
+				F00386242BBC7AE300BCB7A6 /* PeopleViewController.swift */,
 			);
 			path = People;
 			sourceTree = "<group>";
@@ -737,6 +743,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F00386252BBC7AE300BCB7A6 /* PeopleViewController.swift in Sources */,
 				F0A43D152BA9C1C8007346B3 /* NetworkHelper.swift in Sources */,
 				F0A43D132BA98F66007346B3 /* NetworkManager.swift in Sources */,
 				F0A0A58F2BADFA7700306897 /* AuthInteractor.swift in Sources */,
@@ -745,6 +752,7 @@
 				F0A0A5892BADFA0100306897 /* AuthRoture.swift in Sources */,
 				F05EB8FF2BB8BC2C001FC6FE /* HomeViewController.swift in Sources */,
 				F07904712BA0C561000EA4B5 /* OnboardViewControler.swift in Sources */,
+				F00386232BBC79EB00BCB7A6 /* TabbarViewController.swift in Sources */,
 				F0CAEAF12BA2168900F2F5B9 /* OnboardView.swift in Sources */,
 				F091EBCA2B9FBA4400A6A042 /* ViewController.swift in Sources */,
 				F056DB072BB5F3BF00333A28 /* SigninViewController.swift in Sources */,
