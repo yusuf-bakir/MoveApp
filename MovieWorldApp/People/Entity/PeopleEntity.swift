@@ -6,3 +6,8 @@
 //
 
 import Foundation
+struct PeopleEntity:Codable {
+    init(from decoder: Decoder) throws {
+    }
+    
+}

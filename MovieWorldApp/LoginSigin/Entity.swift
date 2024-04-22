@@ -6,7 +6,7 @@
 //
 
 import Foundation
-class AuthenticationEntity {
+class AuthenticationEntity:Codable {
     let userMail:String?
     let userPassword :String?
     init(userMail: String?, userPassword: String?) {

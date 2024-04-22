@@ -6,3 +6,9 @@
 //
 
 import Foundation
+protocol PeoplePresenterProtocol{
+    
+}
+class PeoplePresenter {
+    
+}
