@@ -12,7 +12,6 @@
 		F056DB022BB5F18300333A28 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = F056DB012BB5F18200333A28 /* GoogleService-Info.plist */; };
 		F056DB042BB5F35600333A28 /* AuthSigin.swift in Sources */ = {isa = PBXBuildFile; fileRef = F056DB032BB5F35600333A28 /* AuthSigin.swift */; };
 		F056DB072BB5F3BF00333A28 /* SigninViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F056DB062BB5F3BF00333A28 /* SigninViewController.swift */; };
-		F05EB8F72BB8BBF4001FC6FE /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F05EB8F62BB8BBF4001FC6FE /* HomeView.swift */; };
 		F05EB8F92BB8BC09001FC6FE /* HomeInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = F05EB8F82BB8BC09001FC6FE /* HomeInteractor.swift */; };
 		F05EB8FB2BB8BC16001FC6FE /* HomeRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = F05EB8FA2BB8BC16001FC6FE /* HomeRouter.swift */; };
 		F05EB8FD2BB8BC1F001FC6FE /* HomePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = F05EB8FC2BB8BC1F001FC6FE /* HomePresenter.swift */; };
@@ -45,6 +44,11 @@
 		F0A6C9AA2BB7617A00FF0B9A /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = F0A6C9A92BB7617A00FF0B9A /* FirebaseFirestore */; };
 		F0A6C9AC2BB7617A00FF0B9A /* FirebaseStorage in Frameworks */ = {isa = PBXBuildFile; productRef = F0A6C9AB2BB7617A00FF0B9A /* FirebaseStorage */; };
 		F0CAEAF12BA2168900F2F5B9 /* OnboardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0CAEAF02BA2168900F2F5B9 /* OnboardView.swift */; };
+		F0F17EB62BD1762B00668C2D /* PeopleEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0F17EB52BD1762B00668C2D /* PeopleEntity.swift */; };
+		F0F17EB82BD1764800668C2D /* PeopleRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0F17EB72BD1764800668C2D /* PeopleRouter.swift */; };
+		F0F17EBA2BD1766E00668C2D /* PeopleInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0F17EB92BD1766E00668C2D /* PeopleInteractor.swift */; };
+		F0F17EBC2BD176BB00668C2D /* PeoplePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0F17EBB2BD176BB00668C2D /* PeoplePresenter.swift */; };
+		F0F17EC02BD17AB300668C2D /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0F17EBF2BD17AB300668C2D /* SearchViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -83,7 +87,6 @@
 		F056DB012BB5F18200333A28 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		F056DB032BB5F35600333A28 /* AuthSigin.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthSigin.swift; sourceTree = "<group>"; };
 		F056DB062BB5F3BF00333A28 /* SigninViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SigninViewController.swift; sourceTree = "<group>"; };
-		F05EB8F62BB8BBF4001FC6FE /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		F05EB8F82BB8BC09001FC6FE /* HomeInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeInteractor.swift; sourceTree = "<group>"; };
 		F05EB8FA2BB8BC16001FC6FE /* HomeRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeRouter.swift; sourceTree = "<group>"; };
 		F05EB8FC2BB8BC1F001FC6FE /* HomePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePresenter.swift; sourceTree = "<group>"; };
@@ -113,6 +116,11 @@
 		F0A43D1F2BAA0E0B007346B3 /* OnboardPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardPresenter.swift; sourceTree = "<group>"; };
 		F0A6C9A52BB74CD800FF0B9A /* AlertMessage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertMessage.swift; sourceTree = "<group>"; };
 		F0CAEAF02BA2168900F2F5B9 /* OnboardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardView.swift; sourceTree = "<group>"; };
+		F0F17EB52BD1762B00668C2D /* PeopleEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PeopleEntity.swift; sourceTree = "<group>"; };
+		F0F17EB72BD1764800668C2D /* PeopleRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PeopleRouter.swift; sourceTree = "<group>"; };
+		F0F17EB92BD1766E00668C2D /* PeopleInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PeopleInteractor.swift; sourceTree = "<group>"; };
+		F0F17EBB2BD176BB00668C2D /* PeoplePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PeoplePresenter.swift; sourceTree = "<group>"; };
+		F0F17EBF2BD17AB300668C2D /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -497,6 +505,7 @@
 		F0B5B34B2BA4F9270057FE6F /* Presenter */ = {
 			isa = PBXGroup;
 			children = (
+				F0F17EBB2BD176BB00668C2D /* PeoplePresenter.swift */,
 			);
 			path = Presenter;
 			sourceTree = "<group>";
@@ -504,6 +513,7 @@
 		F0B5B34C2BA4F9310057FE6F /* Interactor */ = {
 			isa = PBXGroup;
 			children = (
+				F0F17EB92BD1766E00668C2D /* PeopleInteractor.swift */,
 			);
 			path = Interactor;
 			sourceTree = "<group>";
@@ -511,6 +521,7 @@
 		F0B5B34D2BA4F9370057FE6F /* Router */ = {
 			isa = PBXGroup;
 			children = (
+				F0F17EB72BD1764800668C2D /* PeopleRouter.swift */,
 			);
 			path = Router;
 			sourceTree = "<group>";
@@ -518,6 +529,7 @@
 		F0B5B34E2BA4F95C0057FE6F /* Entity */ = {
 			isa = PBXGroup;
 			children = (
+				F0F17EB52BD1762B00668C2D /* PeopleEntity.swift */,
 			);
 			path = Entity;
 			sourceTree = "<group>";
@@ -525,6 +537,7 @@
 		F0B5B34F2BA4F96D0057FE6F /* View */ = {
 			isa = PBXGroup;
 			children = (
+				F0F17EBF2BD17AB300668C2D /* SearchViewController.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -584,7 +597,6 @@
 		F0B5B3572BA4F9BC0057FE6F /* View */ = {
 			isa = PBXGroup;
 			children = (
-				F05EB8F62BB8BBF4001FC6FE /* HomeView.swift */,
 				F05EB8FE2BB8BC2C001FC6FE /* HomeViewController.swift */,
 			);
 			path = View;
@@ -743,6 +755,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F0F17EC02BD17AB300668C2D /* SearchViewController.swift in Sources */,
 				F00386252BBC7AE300BCB7A6 /* PeopleViewController.swift in Sources */,
 				F0A43D152BA9C1C8007346B3 /* NetworkHelper.swift in Sources */,
 				F0A43D132BA98F66007346B3 /* NetworkManager.swift in Sources */,
@@ -750,10 +763,14 @@
 				F05EB8F92BB8BC09001FC6FE /* HomeInteractor.swift in Sources */,
 				F0A0A58D2BADFA3500306897 /* Entity.swift in Sources */,
 				F0A0A5892BADFA0100306897 /* AuthRoture.swift in Sources */,
+				F0F17EB82BD1764800668C2D /* PeopleRouter.swift in Sources */,
+				F0F17EBC2BD176BB00668C2D /* PeoplePresenter.swift in Sources */,
 				F05EB8FF2BB8BC2C001FC6FE /* HomeViewController.swift in Sources */,
 				F07904712BA0C561000EA4B5 /* OnboardViewControler.swift in Sources */,
+				F0F17EB62BD1762B00668C2D /* PeopleEntity.swift in Sources */,
 				F00386232BBC79EB00BCB7A6 /* TabbarViewController.swift in Sources */,
 				F0CAEAF12BA2168900F2F5B9 /* OnboardView.swift in Sources */,
+				F0F17EBA2BD1766E00668C2D /* PeopleInteractor.swift in Sources */,
 				F091EBCA2B9FBA4400A6A042 /* ViewController.swift in Sources */,
 				F056DB072BB5F3BF00333A28 /* SigninViewController.swift in Sources */,
 				F0A43D1B2BA9CCA3007346B3 /* AuthenticationVC.swift in Sources */,
@@ -766,7 +783,6 @@
 				F0A43D202BAA0E0B007346B3 /* OnboardPresenter.swift in Sources */,
 				F0A43D1E2BAA0DF9007346B3 /* OnboardRouter.swift in Sources */,
 				F0A43D192BA9C9DB007346B3 /* AuthenticationView.swift in Sources */,
-				F05EB8F72BB8BBF4001FC6FE /* HomeView.swift in Sources */,
 				F05EB8FD2BB8BC1F001FC6FE /* HomePresenter.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

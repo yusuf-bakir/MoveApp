@@ -6,11 +6,19 @@
 //
 
 import Foundation
+import Alamofire
 protocol HomeInteractorProtocol {
+    
     var ınteractorTopresenter : HomePresenterProtocol? {get set}
 }
 class HomeInteractor:HomeInteractorProtocol {
+   
+    
+   
+    
     var ınteractorTopresenter: HomePresenterProtocol?
     
-    
-}
+   
+    }
+
+
