@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		F00386232BBC79EB00BCB7A6 /* TabbarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F00386222BBC79EB00BCB7A6 /* TabbarViewController.swift */; };
 		F00386252BBC7AE300BCB7A6 /* PeopleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F00386242BBC7AE300BCB7A6 /* PeopleViewController.swift */; };
+		F050B14F2BD6FA260079BE2F /* HorizontalViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F050B14D2BD6FA260079BE2F /* HorizontalViewCell.swift */; };
+		F050B1502BD6FA260079BE2F /* HorizontalViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F050B14E2BD6FA260079BE2F /* HorizontalViewCell.xib */; };
 		F056DB022BB5F18300333A28 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = F056DB012BB5F18200333A28 /* GoogleService-Info.plist */; };
 		F056DB042BB5F35600333A28 /* AuthSigin.swift in Sources */ = {isa = PBXBuildFile; fileRef = F056DB032BB5F35600333A28 /* AuthSigin.swift */; };
 		F056DB072BB5F3BF00333A28 /* SigninViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F056DB062BB5F3BF00333A28 /* SigninViewController.swift */; };
@@ -84,6 +86,8 @@
 /* Begin PBXFileReference section */
 		F00386222BBC79EB00BCB7A6 /* TabbarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabbarViewController.swift; sourceTree = "<group>"; };
 		F00386242BBC7AE300BCB7A6 /* PeopleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PeopleViewController.swift; sourceTree = "<group>"; };
+		F050B14D2BD6FA260079BE2F /* HorizontalViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HorizontalViewCell.swift; sourceTree = "<group>"; };
+		F050B14E2BD6FA260079BE2F /* HorizontalViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HorizontalViewCell.xib; sourceTree = "<group>"; };
 		F056DB012BB5F18200333A28 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		F056DB032BB5F35600333A28 /* AuthSigin.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthSigin.swift; sourceTree = "<group>"; };
 		F056DB062BB5F3BF00333A28 /* SigninViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SigninViewController.swift; sourceTree = "<group>"; };
@@ -289,6 +293,8 @@
 		F0B5B3302BA4F5C30057FE6F /* Cells */ = {
 			isa = PBXGroup;
 			children = (
+				F050B14D2BD6FA260079BE2F /* HorizontalViewCell.swift */,
+				F050B14E2BD6FA260079BE2F /* HorizontalViewCell.xib */,
 			);
 			path = Cells;
 			sourceTree = "<group>";
@@ -728,6 +734,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F050B1502BD6FA260079BE2F /* HorizontalViewCell.xib in Resources */,
 				F091EBD22B9FBA4600A6A042 /* LaunchScreen.storyboard in Resources */,
 				F091EBCF2B9FBA4600A6A042 /* Assets.xcassets in Resources */,
 				F056DB022BB5F18300333A28 /* GoogleService-Info.plist in Resources */,
@@ -781,6 +788,7 @@
 				F091EBC82B9FBA4400A6A042 /* SceneDelegate.swift in Sources */,
 				F05EB8FB2BB8BC16001FC6FE /* HomeRouter.swift in Sources */,
 				F0A43D202BAA0E0B007346B3 /* OnboardPresenter.swift in Sources */,
+				F050B14F2BD6FA260079BE2F /* HorizontalViewCell.swift in Sources */,
 				F0A43D1E2BAA0DF9007346B3 /* OnboardRouter.swift in Sources */,
 				F0A43D192BA9C9DB007346B3 /* AuthenticationView.swift in Sources */,
 				F05EB8FD2BB8BC1F001FC6FE /* HomePresenter.swift in Sources */,
