@@ -45,6 +45,19 @@
                         <color key="textColor" systemColor="systemGray2Color"/>
                         <nil key="highlightedColor"/>
                     </label>
+                    <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="ayY-cZ-sAk">
+                        <rect key="frame" x="110" y="51.333333333333336" width="205" height="17.999999999999993"/>
+                        <color key="backgroundColor" name="AccentColor"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="18" id="Edo-Cf-1lS"/>
+                        </constraints>
+                        <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="Nbb-8E-cLh">
+                            <size key="itemSize" width="128" height="128"/>
+                            <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                            <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                            <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                        </collectionViewFlowLayout>
+                    </collectionView>
                 </subviews>
             </view>
             <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
@@ -52,6 +65,8 @@
                 <constraint firstItem="3pp-in-ehd" firstAttribute="width" secondItem="gTV-IL-0wX" secondAttribute="width" multiplier="0.299694" id="30m-5N-rmf"/>
                 <constraint firstAttribute="trailing" secondItem="X0l-oT-aND" secondAttribute="trailing" constant="12" id="4NS-9G-inM"/>
                 <constraint firstAttribute="bottom" secondItem="3pp-in-ehd" secondAttribute="bottom" id="G6s-XB-ZwB"/>
+                <constraint firstItem="ayY-cZ-sAk" firstAttribute="trailing" secondItem="2GH-il-KDD" secondAttribute="trailing" id="HCA-he-w95"/>
+                <constraint firstItem="ayY-cZ-sAk" firstAttribute="top" secondItem="zKb-fo-KpH" secondAttribute="bottom" constant="8" id="ITr-uj-Gpm"/>
                 <constraint firstItem="2GH-il-KDD" firstAttribute="top" secondItem="3pp-in-ehd" secondAttribute="top" id="QgB-xw-tnC"/>
                 <constraint firstItem="3pp-in-ehd" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="UjX-1K-IrK"/>
                 <constraint firstAttribute="trailing" secondItem="2GH-il-KDD" secondAttribute="trailing" constant="12" id="VZf-sC-82Y"/>
@@ -62,17 +77,20 @@
                 <constraint firstItem="X0l-oT-aND" firstAttribute="top" secondItem="2GH-il-KDD" secondAttribute="bottom" constant="8" id="iDa-hY-CmH"/>
                 <constraint firstItem="zKb-fo-KpH" firstAttribute="leading" secondItem="3pp-in-ehd" secondAttribute="trailing" constant="12" id="nO5-Xo-Pga"/>
                 <constraint firstItem="2GH-il-KDD" firstAttribute="leading" secondItem="3pp-in-ehd" secondAttribute="trailing" constant="12" id="xfe-W5-KYm"/>
+                <constraint firstItem="ayY-cZ-sAk" firstAttribute="leading" secondItem="2GH-il-KDD" secondAttribute="leading" id="zkY-o3-S7I"/>
             </constraints>
             <size key="customSize" width="147" height="50"/>
             <connections>
+                <outlet property="colletion" destination="ayY-cZ-sAk" id="clV-1k-zM0"/>
                 <outlet property="movieImage" destination="3pp-in-ehd" id="DuF-4Z-MUc"/>
                 <outlet property="movieTitle" destination="2GH-il-KDD" id="EDp-VY-ASU"/>
+                <outlet property="ratingLabel" destination="X0l-oT-aND" id="xtu-Eb-2cf"/>
             </connections>
             <point key="canvasLocation" x="200.76335877862596" y="-11.267605633802818"/>
         </collectionViewCell>
     </objects>
     <resources>
-        <image name="star.fill" catalog="system" width="128" height="116"/>
+        <image name="star.fill" catalog="system" width="32" height="32"/>
         <image name="unicorn.png" width="200" height="205"/>
         <namedColor name="AccentColor">
             <color red="1" green="0.79199999570846558" blue="0.15700000524520874" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

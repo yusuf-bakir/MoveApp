@@ -9,22 +9,29 @@ import Foundation
 import Alamofire
 protocol NetworkManagerProtocol {
     func makeRequest <T:Codable>(type:T.Type,url :String,method:HTTPMethod,completion:@escaping((Result<T,ErrorTypes>)->()))
+    func networkBug ()
 }
 class NetworkManager :NetworkManagerProtocol{
-    func makeRequest <T:Codable>(type:T.Type,url :String,method:HTTPMethod,completion:@escaping((Result<T,ErrorTypes>)->())) {
-        AF.request(url.addingPercentEncoding(withAllowedCharacters: .afURLQueryAllowed) ?? "").responseData(completionHandler: { response in
+    func networkBug() {
+        print("network katmanı çalışıyor")
+    }
+    func makeRequest <T:Codable>(type:T.Type,url :String,method:HTTPMethod,completion:@escaping((Result<T,ErrorTypes>)->() )) {
+        AF.request(url,method: method).responseData(completionHandler: { response in
             
             switch response.result {
                 
             case .success(let data):
                 do {
                     let dataDecoder = try JSONDecoder().decode(T.self, from: data)
+                  
                     completion(.success(dataDecoder))
-                }catch{
+                }catch(let error){
+                    print(error)
                     completion(.failure(.invalidData))
                 }
-            case .failure(_):
-                completion(.failure(.generalError))
+            case .failure(let error):
+               completion(.failure(.generalError))
+                print(error)
             }
         })
     }

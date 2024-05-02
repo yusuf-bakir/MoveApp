@@ -14,13 +14,14 @@ enum ErrorTypes: String, Error {
 
 class NetworkHelper {
     static let shared = NetworkHelper()
-//        https://api.themoviedb.org/3/moviegenre/movie/list?api_key=976934cfcdc4a54aa56284f162637a3e
-    private let baseURL = "https://api.themoviedb.org/3/movie"
+
+    private let baseURL = "https://api.themoviedb.org/3/"
     private let apiKey = "976934cfcdc4a54aa56284f162637a3e"
     private let imageBasePath = "https://image.tmdb.org/t/p/original/"
     
     func requestUrl(url: String) -> String {
         baseURL + url + "?api_key=\(apiKey)"
+        
     }
     
     func getImagePath(url: String) -> String {

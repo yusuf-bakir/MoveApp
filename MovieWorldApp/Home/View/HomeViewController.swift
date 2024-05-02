@@ -6,22 +6,34 @@
 //
 import SnapKit
 import UIKit
-protocol HomeViewControllerProtocol {
+protocol HomeViewControllerProtocol :AnyObject{
     var viewToPresenter : HomePresenterProtocol?{get set }
+    func updateMovieResults(_ movieResults: [MovieResult])
 }
 final class HomeViewController: UIViewController, HomeViewControllerProtocol,UICollectionViewDataSource,UICollectionViewDelegateFlowLayout{
+    func updateMovieResults(_ movieResults: [MovieResult]) {
+        
+        movieResultData = movieResults
+        self.collectionView.reloadData()
+        print(movieResultData)
+    }
+    
     var collectionView: UICollectionView!
     var viewToPresenter: HomePresenterProtocol?
+    var movieResultData :[MovieResult]?
     
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = .white
+        HomeRouter.creatHomeModule(ref: self)
         colletionSetup()
         collectionView.dataSource = self
         collectionView.delegate = self
-       
+        viewToPresenter?.getCategoryMovie()
+        
+        
        
     }
     func colletionSetup() {
@@ -56,11 +68,15 @@ final class HomeViewController: UIViewController, HomeViewControllerProtocol,UIC
            
         }
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-           return 30 // Örnek eleman sayısı
+        return movieResultData?.count ?? 0
        }
 
        func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "HorizontalViewCell", for: indexPath)  as! HorizontalViewCell
+           cell.movieTitle.text = movieResultData?[indexPath.row].originalTitle
+           cell.ratingLabel.text = movieResultData?[indexPath.row].ratingText
+           cell.imageUrlString = movieResultData?[indexPath.row].posterPath ?? ""
+//           cell.movieImage.image = movieResultData?[indexPath.row].posterImage
             // Hücre rengi
            
            return cell
