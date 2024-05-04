@@ -20,6 +20,10 @@
 		F05EB8FB2BB8BC16001FC6FE /* HomeRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = F05EB8FA2BB8BC16001FC6FE /* HomeRouter.swift */; };
 		F05EB8FD2BB8BC1F001FC6FE /* HomePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = F05EB8FC2BB8BC1F001FC6FE /* HomePresenter.swift */; };
 		F05EB8FF2BB8BC2C001FC6FE /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F05EB8FE2BB8BC2C001FC6FE /* HomeViewController.swift */; };
+		F06A0B2F2BE6D5FA007E28E3 /* LabelCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F06A0B2D2BE6D5FA007E28E3 /* LabelCollectionViewCell.swift */; };
+		F06A0B302BE6D5FA007E28E3 /* LabelCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F06A0B2E2BE6D5FA007E28E3 /* LabelCollectionViewCell.xib */; };
+		F06A0B322BE6DBD9007E28E3 /* GenreEntitiy.swift in Sources */ = {isa = PBXBuildFile; fileRef = F06A0B312BE6DBD9007E28E3 /* GenreEntitiy.swift */; };
+		F06A0B342BE6DC91007E28E3 /* GenreHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = F06A0B332BE6DC91007E28E3 /* GenreHandler.swift */; };
 		F079046D2BA093E2000EA4B5 /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = F079046C2BA093E2000EA4B5 /* SnapKit */; };
 		F079046F2BA093E2000EA4B5 /* SnapKit-Dynamic in Frameworks */ = {isa = PBXBuildFile; productRef = F079046E2BA093E2000EA4B5 /* SnapKit-Dynamic */; };
 		F07904712BA0C561000EA4B5 /* OnboardViewControler.swift in Sources */ = {isa = PBXBuildFile; fileRef = F07904702BA0C561000EA4B5 /* OnboardViewControler.swift */; };
@@ -98,6 +102,10 @@
 		F05EB8FA2BB8BC16001FC6FE /* HomeRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeRouter.swift; sourceTree = "<group>"; };
 		F05EB8FC2BB8BC1F001FC6FE /* HomePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePresenter.swift; sourceTree = "<group>"; };
 		F05EB8FE2BB8BC2C001FC6FE /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		F06A0B2D2BE6D5FA007E28E3 /* LabelCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LabelCollectionViewCell.swift; sourceTree = "<group>"; };
+		F06A0B2E2BE6D5FA007E28E3 /* LabelCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LabelCollectionViewCell.xib; sourceTree = "<group>"; };
+		F06A0B312BE6DBD9007E28E3 /* GenreEntitiy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenreEntitiy.swift; sourceTree = "<group>"; };
+		F06A0B332BE6DC91007E28E3 /* GenreHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenreHandler.swift; sourceTree = "<group>"; };
 		F07904702BA0C561000EA4B5 /* OnboardViewControler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardViewControler.swift; sourceTree = "<group>"; };
 		F08113DD2BDEC30A00C06B39 /* Entitiy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Entitiy.swift; sourceTree = "<group>"; };
 		F091EBC22B9FBA4400A6A042 /* MovieWorldApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MovieWorldApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -301,6 +309,8 @@
 			children = (
 				F050B14D2BD6FA260079BE2F /* HorizontalViewCell.swift */,
 				F050B14E2BD6FA260079BE2F /* HorizontalViewCell.xib */,
+				F06A0B2D2BE6D5FA007E28E3 /* LabelCollectionViewCell.swift */,
+				F06A0B2E2BE6D5FA007E28E3 /* LabelCollectionViewCell.xib */,
 			);
 			path = Cells;
 			sourceTree = "<group>";
@@ -585,6 +595,7 @@
 		F0B5B3542BA4F9A50057FE6F /* Presenter */ = {
 			isa = PBXGroup;
 			children = (
+				F06A0B332BE6DC91007E28E3 /* GenreHandler.swift */,
 				F05EB8FC2BB8BC1F001FC6FE /* HomePresenter.swift */,
 			);
 			path = Presenter;
@@ -618,6 +629,7 @@
 			isa = PBXGroup;
 			children = (
 				F08113DD2BDEC30A00C06B39 /* Entitiy.swift */,
+				F06A0B312BE6DBD9007E28E3 /* GenreEntitiy.swift */,
 			);
 			path = Entity;
 			sourceTree = "<group>";
@@ -748,6 +760,7 @@
 				F091EBD22B9FBA4600A6A042 /* LaunchScreen.storyboard in Resources */,
 				F091EBCF2B9FBA4600A6A042 /* Assets.xcassets in Resources */,
 				F056DB022BB5F18300333A28 /* GoogleService-Info.plist in Resources */,
+				F06A0B302BE6D5FA007E28E3 /* LabelCollectionViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -796,13 +809,16 @@
 				F0A6C9A62BB74CD800FF0B9A /* AlertMessage.swift in Sources */,
 				F0A0A58B2BADFA1100306897 /* AuthPresenter.swift in Sources */,
 				F091EBC82B9FBA4400A6A042 /* SceneDelegate.swift in Sources */,
+				F06A0B342BE6DC91007E28E3 /* GenreHandler.swift in Sources */,
 				F05EB8FB2BB8BC16001FC6FE /* HomeRouter.swift in Sources */,
 				F0A43D202BAA0E0B007346B3 /* OnboardPresenter.swift in Sources */,
 				F050B14F2BD6FA260079BE2F /* HorizontalViewCell.swift in Sources */,
 				F0A43D1E2BAA0DF9007346B3 /* OnboardRouter.swift in Sources */,
+				F06A0B322BE6DBD9007E28E3 /* GenreEntitiy.swift in Sources */,
 				F08113DE2BDEC30A00C06B39 /* Entitiy.swift in Sources */,
 				F0A43D192BA9C9DB007346B3 /* AuthenticationView.swift in Sources */,
 				F05EB8FD2BB8BC1F001FC6FE /* HomePresenter.swift in Sources */,
+				F06A0B2F2BE6D5FA007E28E3 /* LabelCollectionViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

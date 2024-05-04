@@ -9,33 +9,72 @@ import UIKit
 protocol HomeViewControllerProtocol :AnyObject{
     var viewToPresenter : HomePresenterProtocol?{get set }
     func updateMovieResults(_ movieResults: [MovieResult])
+    func resultGenre(_dataGenre:[GenreEntitiy]?)
 }
-final class HomeViewController: UIViewController, HomeViewControllerProtocol,UICollectionViewDataSource,UICollectionViewDelegateFlowLayout{
-    func updateMovieResults(_ movieResults: [MovieResult]) {
-        
-        movieResultData = movieResults
-        self.collectionView.reloadData()
-        print(movieResultData)
+final class HomeViewController: UIViewController, HomeViewControllerProtocol{
+    func resultGenre(_dataGenre: [GenreEntitiy]?) {
+        DispatchQueue.main.async { [weak self] in
+            self?.movieGenres = _dataGenre
+            
+            GenreHandler.shared.setItems(items: self?.movieGenres ?? [])
+           
+         
+            
+        }
     }
     
+    var movieGenres :[GenreEntitiy]?
     var collectionView: UICollectionView!
     var viewToPresenter: HomePresenterProtocol?
     var movieResultData :[MovieResult]?
     
-    
-    
     override func viewDidLoad() {
         super.viewDidLoad()
-        view.backgroundColor = .white
+        
         HomeRouter.creatHomeModule(ref: self)
         colletionSetup()
         collectionView.dataSource = self
         collectionView.delegate = self
         viewToPresenter?.getCategoryMovie()
+        viewToPresenter?.getGenre()
+        view.backgroundColor = .color1
         
         
        
     }
+    func updateMovieResults(_ movieResults: [MovieResult]) {
+        DispatchQueue.main.async { [weak self] in
+            self?.movieResultData = movieResults
+            self?.collectionView.reloadData()
+            
+
+        
+         
+            
+        }
+        
+    }
+}
+extension HomeViewController:UICollectionViewDataSource,UICollectionViewDelegateFlowLayout {
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        return movieResultData?.count ?? 0
+       }
+
+       func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+           let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "HorizontalViewCell", for: indexPath)  as! HorizontalViewCell
+           cell.configreCell(data:  movieResultData?[indexPath.row])
+
+           
+           return cell
+       }
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        return CGSize(width: collectionView.frame.width * 327 / 375, height: 120)
+    }
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, referenceSizeForHeaderInSection section: Int) -> CGSize {
+        CGSize(width: collectionView.frame.width, height: 400)
+    }
+    
+    
     func colletionSetup() {
         let layout  = UICollectionViewFlowLayout()
         layout.scrollDirection = .vertical
@@ -46,7 +85,7 @@ final class HomeViewController: UIViewController, HomeViewControllerProtocol,UIC
         collectionView.register(UINib(nibName: "HorizontalViewCell", bundle: nil), forCellWithReuseIdentifier: "\(HorizontalViewCell.self)")
         collectionView.showsVerticalScrollIndicator = false
         collectionView.showsHorizontalScrollIndicator = false
-        collectionView.backgroundColor = .white
+        collectionView.backgroundColor = .color1
                view.addSubview(collectionView)
                setupConstraints()
         
@@ -60,34 +99,7 @@ final class HomeViewController: UIViewController, HomeViewControllerProtocol,UIC
                     make.bottom.equalTo(view.safeAreaLayoutGuide.snp.bottom)
                     make.leading.equalTo(view.safeAreaLayoutGuide.snp.leading)
                     make.trailing.equalTo(view.safeAreaLayoutGuide.snp.trailing)
-            
-            
-            
-            
         })
            
         }
-    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return movieResultData?.count ?? 0
-       }
-
-       func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-           let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "HorizontalViewCell", for: indexPath)  as! HorizontalViewCell
-           cell.movieTitle.text = movieResultData?[indexPath.row].originalTitle
-           cell.ratingLabel.text = movieResultData?[indexPath.row].ratingText
-           cell.imageUrlString = movieResultData?[indexPath.row].posterPath ?? ""
-//           cell.movieImage.image = movieResultData?[indexPath.row].posterImage
-            // Hücre rengi
-           
-           return cell
-       }
-    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        return CGSize(width: collectionView.frame.width * 327 / 375, height: 120)
-    }
-    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, referenceSizeForHeaderInSection section: Int) -> CGSize {
-        CGSize(width: collectionView.frame.width, height: 400)
-    }
-    
-   
-    
 }

@@ -21,7 +21,7 @@ class TabbarViewController: UITabBarController {
        
         self.setViewControllers([homeViewcontroller,viewcontroller,tabbarPeople], animated: true)
         self.tabBar.tintColor = .black
-        self.tabBar.backgroundColor  = .gray
+        self.tabBar.backgroundColor  = .orange
       
         
         

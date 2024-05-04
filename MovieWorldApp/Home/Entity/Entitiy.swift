@@ -22,7 +22,6 @@ struct Movie: Codable {
 
 // MARK: - MovieResult
 struct MovieResult: Codable,MovieCellProtocol{
-   
     
     let adult: Bool?
     let backdropPath: String?
@@ -54,9 +53,10 @@ struct MovieResult: Codable,MovieCellProtocol{
         return ""
     }
     
-//    var genreItems: [String] {
-//        GenreHandler.shared.getItemTitles(ids: genreIDS ?? [])
-//    }
+    var genreItems: [String] {
+        
+        GenreHandler.shared.getItemTitles(ids: genreIDS ?? [])
+    }
     
     var overViewText: String {
         overview ?? ""

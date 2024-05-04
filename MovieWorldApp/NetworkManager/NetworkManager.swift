@@ -9,12 +9,9 @@ import Foundation
 import Alamofire
 protocol NetworkManagerProtocol {
     func makeRequest <T:Codable>(type:T.Type,url :String,method:HTTPMethod,completion:@escaping((Result<T,ErrorTypes>)->()))
-    func networkBug ()
 }
 class NetworkManager :NetworkManagerProtocol{
-    func networkBug() {
-        print("network katmanı çalışıyor")
-    }
+  
     func makeRequest <T:Codable>(type:T.Type,url :String,method:HTTPMethod,completion:@escaping((Result<T,ErrorTypes>)->() )) {
         AF.request(url,method: method).responseData(completionHandler: { response in
             
