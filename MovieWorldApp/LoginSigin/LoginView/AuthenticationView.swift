@@ -15,6 +15,7 @@ protocol AuthenticationViewProtocol:AnyObject {
     func passwordInput(_ text: String) ->String
     func emailInput(_ text: String) ->String
     func labelTapp()
+   
 }
    
   class AuthenticationView<T:AuthenticationVC>:UIView {
@@ -91,8 +92,6 @@ protocol AuthenticationViewProtocol:AnyObject {
         ımage.image = UIImage.play
         ımage.contentMode = .scaleAspectFit
         ımage.translatesAutoresizingMaskIntoConstraints = false
-     
-
         ımage.isUserInteractionEnabled = true
               return ımage
     }()
@@ -166,6 +165,7 @@ protocol AuthenticationViewProtocol:AnyObject {
         logoLabel.isUserInteractionEnabled = true
         logoLabel.addGestureRecognizer(tapGesture)
     }
+      
     
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")

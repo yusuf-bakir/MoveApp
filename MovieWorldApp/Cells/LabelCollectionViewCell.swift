@@ -15,7 +15,7 @@ class LabelCollectionViewCell: UICollectionViewCell {
         titleLabel.textColor = .black
         layer.cornerRadius = 5
         layer.masksToBounds = true
-        // Initialization code
+       
       
     }
     func configre (text:String) {

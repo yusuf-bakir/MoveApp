@@ -21,8 +21,7 @@ final class HomePresenter:HomePresenterProtocol{
             if let error  = error {
                 print(error.localizedDescription)
             }else{
-                self?.movieGenre = data
-                self?.view?.resultGenre(_dataGenre: self?.movieGenre)
+                self?.view?.resultGenre(_dataGenre:data)
             }
             
             
@@ -32,10 +31,8 @@ final class HomePresenter:HomePresenterProtocol{
  
 
     
-    var movieResultItems = [MovieResult]()
-    
-    var view: HomeViewControllerProtocol?
-    var movieGenre :[GenreEntitiy]?
+   
+    weak  var view: HomeViewControllerProtocol?
     var movie :Movie?
     var router: HomeRouterProtocol?
     

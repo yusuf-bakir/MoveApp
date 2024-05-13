@@ -12,7 +12,10 @@ protocol HomeViewControllerProtocol :AnyObject{
     func resultGenre(_dataGenre:[GenreEntitiy]?)
 }
 final class HomeViewController: UIViewController, HomeViewControllerProtocol{
+    
+    
     func resultGenre(_dataGenre: [GenreEntitiy]?) {
+        
         DispatchQueue.main.async { [weak self] in
             self?.movieGenres = _dataGenre
             
@@ -26,7 +29,7 @@ final class HomeViewController: UIViewController, HomeViewControllerProtocol{
     var movieGenres :[GenreEntitiy]?
     var collectionView: UICollectionView!
     var viewToPresenter: HomePresenterProtocol?
-    var movieResultData :[MovieResult]?
+    var movieResulstData :[MovieResult]?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -40,11 +43,25 @@ final class HomeViewController: UIViewController, HomeViewControllerProtocol{
         view.backgroundColor = .color1
         
         
+        
+        
+//        let toolbar = UIToolbar()
+//        toolbar.barTintColor = UIColor.white
+////        let button1 = UIBarButtonItem(title: "Button 1", style: .plain, target: self, action: #selector(button1Tapped))
+////               let flexibleSpace = UIBarButtonItem(barButtonSystemItem: .flexibleSpace, target: nil, action: nil) // Esnek boşluk ekleyerek diğer butonu sağ tarafa kaydırıyoruz
+////               let button2 = UIBarButtonItem(title: "Button 2", style: .plain, target: self, action: #selector(button2Tapped))
+//        toolbar.setItems([ flexibleSpace], animated: true)
+//        toolbar.translatesAutoresizingMaskIntoConstraints = false
+//        view.addSubview(toolbar)
+//        
        
     }
+    
+    
+    
     func updateMovieResults(_ movieResults: [MovieResult]) {
         DispatchQueue.main.async { [weak self] in
-            self?.movieResultData = movieResults
+            self?.movieResulstData = movieResults
             self?.collectionView.reloadData()
             
 
@@ -57,21 +74,41 @@ final class HomeViewController: UIViewController, HomeViewControllerProtocol{
 }
 extension HomeViewController:UICollectionViewDataSource,UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return movieResultData?.count ?? 0
+        return movieResulstData?.count ?? 0
        }
+    
 
        func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "HorizontalViewCell", for: indexPath)  as! HorizontalViewCell
-           cell.configreCell(data:  movieResultData?[indexPath.row])
-
+           cell.configreCell(data:  movieResulstData?[indexPath.row])
+           
            
            return cell
        }
+    
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         return CGSize(width: collectionView.frame.width * 327 / 375, height: 120)
     }
+    
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, referenceSizeForHeaderInSection section: Int) -> CGSize {
         CGSize(width: collectionView.frame.width, height: 400)
+    }
+    
+    
+     func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> UICollectionReusableView {
+//        let header = collectionView.dequeueReusableSupplementaryView(ofKind: kind, withReuseIdentifier: "HomeHeader", for: indexPath) as! HomeHeader
+         if kind == UICollectionView.elementKindSectionHeader {
+                let headerView = collectionView.dequeueReusableSupplementaryView(ofKind: kind, withReuseIdentifier: "HomeHeader", for: indexPath) as! HomeHeader
+            
+             headerView.confirgeData(data:movieResulstData ?? [])
+                return headerView
+            } else {
+                
+                return UICollectionReusableView()
+            }
+       
+      
+        
     }
     
     
@@ -85,11 +122,11 @@ extension HomeViewController:UICollectionViewDataSource,UICollectionViewDelegate
         collectionView.register(UINib(nibName: "HorizontalViewCell", bundle: nil), forCellWithReuseIdentifier: "\(HorizontalViewCell.self)")
         collectionView.showsVerticalScrollIndicator = false
         collectionView.showsHorizontalScrollIndicator = false
-        collectionView.backgroundColor = .color1
+       collectionView.backgroundColor = .color1
+      
+        collectionView.register(UINib(nibName: "HomeHeader", bundle: nil), forSupplementaryViewOfKind: UICollectionView.elementKindSectionHeader, withReuseIdentifier: "HomeHeader")
                view.addSubview(collectionView)
                setupConstraints()
-        
-        
     }
     func setupConstraints() {
             collectionView.translatesAutoresizingMaskIntoConstraints = false

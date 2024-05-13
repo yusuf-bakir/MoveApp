@@ -9,7 +9,7 @@ import UIKit
 import SnapKit
 import SDWebImage
 protocol MovieCellProtocol {
-    var posterImage: String { get }
+    var posterImage: String { get  }
     var titleText: String { get }
     var ratingText: String { get }
      var genreItems: [String] { get }
@@ -82,7 +82,7 @@ extension HorizontalViewCell: UICollectionViewDataSource, UICollectionViewDelega
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        return CGSize(width: 65, height: collectionView.frame.height)
+        return CGSize(width: 70, height:  collectionView.frame.height)
     }
     
 }

@@ -20,8 +20,9 @@ class TabbarViewController: UITabBarController {
         tabbarPeople.tabBarItem = UITabBarItem(title: "three", image: UIImage(systemName: "person.circle.fill"), tag: 2)
        
         self.setViewControllers([homeViewcontroller,viewcontroller,tabbarPeople], animated: true)
-        self.tabBar.tintColor = .black
-        self.tabBar.backgroundColor  = .orange
+        self.tabBar.tintColor = .white
+        self.tabBar.barStyle = .black
+
       
         
         

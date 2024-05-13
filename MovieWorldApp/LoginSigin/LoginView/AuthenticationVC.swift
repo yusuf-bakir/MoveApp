@@ -19,40 +19,34 @@ final class AuthenticationVC: UIViewController, UINavigationControllerDelegate {
            var AuthDelegate:AuthenticationViewProtocol?
         private var passwordText = ""
         private var emailText =  ""
+ 
      override func loadView() {
-        let authentication = AuthenticationView(self)
+         let authentication = AuthenticationView(self)
         view = authentication
         authentication.AuthDelegate = self
-    
          
         
       
         }
     
-//    override func viewDidAppear(_ animated: Bool) {
-//        super.viewDidAppear(animated)
-//        let authentication = AuthenticationView(self)
-//        authentication.AuthDelegate = self
-//        authentication.AuthDelegate?.animatioImage()
-//       
-//    }
-//    
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
         AuthenticationRoture.start(ref: self)
-       
-    
+        
+   
         
        
     }
+    
 
 }
 
     
 
 extension AuthenticationVC:AuthenticationViewProtocol {
+    
   
   
     
@@ -107,7 +101,4 @@ extension AuthenticationVC:AuthenticationVCProtocol {
     
     
     
-}
-#Preview {
-    AuthenticationVC()
 }
