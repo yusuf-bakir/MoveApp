@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="22155" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22131"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="gTV-IL-0wX" customClass="HorizontalViewCell" customModule="MovieWorldApp" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="327" height="120"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="327" height="120"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="unicorn.png" translatesAutoresizingMaskIntoConstraints="NO" id="3pp-in-ehd">
+                        <rect key="frame" x="0.0" y="0.0" width="98" height="120"/>
+                        <constraints>
+                            <constraint firstAttribute="width" relation="lessThanOrEqual" constant="98" id="Ott-ZS-FGp"/>
+                            <constraint firstAttribute="height" constant="120" id="c0S-tv-7wO"/>
+                        </constraints>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Game Of Thronse " textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2GH-il-KDD">
+                        <rect key="frame" x="110" y="0.0" width="205" height="19.333333333333332"/>
+                        <fontDescription key="fontDescription" name="AlNile-Bold" family="Al Nile" pointSize="14"/>
+                        <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="star.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="zKb-fo-KpH">
+                        <rect key="frame" x="110" y="27.000000000000004" width="16" height="15.666666666666668"/>
+                        <color key="tintColor" name="AccentColor"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="16" id="7QL-ko-Fon"/>
+                            <constraint firstAttribute="width" constant="16" id="ajs-WK-tMQ"/>
+                        </constraints>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="6.4/10 IMDb" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" enabled="NO" highlighted="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="X0l-oT-aND">
+                        <rect key="frame" x="133" y="27.333333333333329" width="182" height="15"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                        <color key="textColor" systemColor="systemGray2Color"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="ayY-cZ-sAk">
+                        <rect key="frame" x="110" y="51.333333333333336" width="205" height="17.999999999999993"/>
+                        <color key="backgroundColor" name="AccentColor"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="18" id="Edo-Cf-1lS"/>
+                        </constraints>
+                        <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="Nbb-8E-cLh">
+                            <size key="itemSize" width="128" height="128"/>
+                            <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                            <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                            <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                        </collectionViewFlowLayout>
+                    </collectionView>
+                </subviews>
+            </view>
+            <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
+            <constraints>
+                <constraint firstItem="3pp-in-ehd" firstAttribute="width" secondItem="gTV-IL-0wX" secondAttribute="width" multiplier="0.299694" id="30m-5N-rmf"/>
+                <constraint firstAttribute="trailing" secondItem="X0l-oT-aND" secondAttribute="trailing" constant="12" id="4NS-9G-inM"/>
+                <constraint firstAttribute="bottom" secondItem="3pp-in-ehd" secondAttribute="bottom" id="G6s-XB-ZwB"/>
+                <constraint firstItem="ayY-cZ-sAk" firstAttribute="trailing" secondItem="2GH-il-KDD" secondAttribute="trailing" id="HCA-he-w95"/>
+                <constraint firstItem="ayY-cZ-sAk" firstAttribute="top" secondItem="zKb-fo-KpH" secondAttribute="bottom" constant="8" id="ITr-uj-Gpm"/>
+                <constraint firstItem="2GH-il-KDD" firstAttribute="top" secondItem="3pp-in-ehd" secondAttribute="top" id="QgB-xw-tnC"/>
+                <constraint firstItem="3pp-in-ehd" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="UjX-1K-IrK"/>
+                <constraint firstAttribute="trailing" secondItem="2GH-il-KDD" secondAttribute="trailing" constant="12" id="VZf-sC-82Y"/>
+                <constraint firstItem="3pp-in-ehd" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="WOG-QY-D5l"/>
+                <constraint firstItem="2GH-il-KDD" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="bbw-LX-5UX"/>
+                <constraint firstItem="zKb-fo-KpH" firstAttribute="top" secondItem="2GH-il-KDD" secondAttribute="bottom" constant="8" symbolic="YES" id="hfP-VM-taI"/>
+                <constraint firstItem="X0l-oT-aND" firstAttribute="leading" secondItem="zKb-fo-KpH" secondAttribute="trailing" constant="7" id="hw2-dv-4fa"/>
+                <constraint firstItem="X0l-oT-aND" firstAttribute="top" secondItem="2GH-il-KDD" secondAttribute="bottom" constant="8" id="iDa-hY-CmH"/>
+                <constraint firstItem="zKb-fo-KpH" firstAttribute="leading" secondItem="3pp-in-ehd" secondAttribute="trailing" constant="12" id="nO5-Xo-Pga"/>
+                <constraint firstItem="2GH-il-KDD" firstAttribute="leading" secondItem="3pp-in-ehd" secondAttribute="trailing" constant="12" id="xfe-W5-KYm"/>
+                <constraint firstItem="ayY-cZ-sAk" firstAttribute="leading" secondItem="2GH-il-KDD" secondAttribute="leading" id="zkY-o3-S7I"/>
+            </constraints>
+            <size key="customSize" width="147" height="50"/>
+            <connections>
+                <outlet property="colletion" destination="ayY-cZ-sAk" id="clV-1k-zM0"/>
+                <outlet property="movieImage" destination="3pp-in-ehd" id="DuF-4Z-MUc"/>
+                <outlet property="movieTitle" destination="2GH-il-KDD" id="EDp-VY-ASU"/>
+                <outlet property="ratingLabel" destination="X0l-oT-aND" id="xtu-Eb-2cf"/>
+            </connections>
+            <point key="canvasLocation" x="200.76335877862596" y="-11.267605633802818"/>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <image name="star.fill" catalog="system" width="32" height="32"/>
+        <image name="unicorn.png" width="200" height="205"/>
+        <namedColor name="AccentColor">
+            <color red="1" green="0.79199999570846558" blue="0.15700000524520874" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <systemColor name="systemGray2Color">
+            <color red="0.68235294120000001" green="0.68235294120000001" blue="0.69803921570000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>

@@ -9,6 +9,10 @@
 /* Begin PBXBuildFile section */
 		F00386232BBC79EB00BCB7A6 /* TabbarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F00386222BBC79EB00BCB7A6 /* TabbarViewController.swift */; };
 		F00386252BBC7AE300BCB7A6 /* PeopleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F00386242BBC7AE300BCB7A6 /* PeopleViewController.swift */; };
+		F04D64A32BE130AE00209CF3 /* SDWebImage in Frameworks */ = {isa = PBXBuildFile; productRef = F04D64A22BE130AE00209CF3 /* SDWebImage */; };
+		F04D64A52BE130AE00209CF3 /* SDWebImageMapKit in Frameworks */ = {isa = PBXBuildFile; productRef = F04D64A42BE130AE00209CF3 /* SDWebImageMapKit */; };
+		F050B14F2BD6FA260079BE2F /* HorizontalViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F050B14D2BD6FA260079BE2F /* HorizontalViewCell.swift */; };
+		F050B1502BD6FA260079BE2F /* HorizontalViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F050B14E2BD6FA260079BE2F /* HorizontalViewCell.xib */; };
 		F056DB022BB5F18300333A28 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = F056DB012BB5F18200333A28 /* GoogleService-Info.plist */; };
 		F056DB042BB5F35600333A28 /* AuthSigin.swift in Sources */ = {isa = PBXBuildFile; fileRef = F056DB032BB5F35600333A28 /* AuthSigin.swift */; };
 		F056DB072BB5F3BF00333A28 /* SigninViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F056DB062BB5F3BF00333A28 /* SigninViewController.swift */; };
@@ -19,6 +23,7 @@
 		F079046D2BA093E2000EA4B5 /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = F079046C2BA093E2000EA4B5 /* SnapKit */; };
 		F079046F2BA093E2000EA4B5 /* SnapKit-Dynamic in Frameworks */ = {isa = PBXBuildFile; productRef = F079046E2BA093E2000EA4B5 /* SnapKit-Dynamic */; };
 		F07904712BA0C561000EA4B5 /* OnboardViewControler.swift in Sources */ = {isa = PBXBuildFile; fileRef = F07904702BA0C561000EA4B5 /* OnboardViewControler.swift */; };
+		F08113DE2BDEC30A00C06B39 /* Entitiy.swift in Sources */ = {isa = PBXBuildFile; fileRef = F08113DD2BDEC30A00C06B39 /* Entitiy.swift */; };
 		F091EBC62B9FBA4400A6A042 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F091EBC52B9FBA4400A6A042 /* AppDelegate.swift */; };
 		F091EBC82B9FBA4400A6A042 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F091EBC72B9FBA4400A6A042 /* SceneDelegate.swift */; };
 		F091EBCA2B9FBA4400A6A042 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F091EBC92B9FBA4400A6A042 /* ViewController.swift */; };
@@ -84,6 +89,8 @@
 /* Begin PBXFileReference section */
 		F00386222BBC79EB00BCB7A6 /* TabbarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabbarViewController.swift; sourceTree = "<group>"; };
 		F00386242BBC7AE300BCB7A6 /* PeopleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PeopleViewController.swift; sourceTree = "<group>"; };
+		F050B14D2BD6FA260079BE2F /* HorizontalViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HorizontalViewCell.swift; sourceTree = "<group>"; };
+		F050B14E2BD6FA260079BE2F /* HorizontalViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HorizontalViewCell.xib; sourceTree = "<group>"; };
 		F056DB012BB5F18200333A28 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		F056DB032BB5F35600333A28 /* AuthSigin.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthSigin.swift; sourceTree = "<group>"; };
 		F056DB062BB5F3BF00333A28 /* SigninViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SigninViewController.swift; sourceTree = "<group>"; };
@@ -92,6 +99,7 @@
 		F05EB8FC2BB8BC1F001FC6FE /* HomePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePresenter.swift; sourceTree = "<group>"; };
 		F05EB8FE2BB8BC2C001FC6FE /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		F07904702BA0C561000EA4B5 /* OnboardViewControler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardViewControler.swift; sourceTree = "<group>"; };
+		F08113DD2BDEC30A00C06B39 /* Entitiy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Entitiy.swift; sourceTree = "<group>"; };
 		F091EBC22B9FBA4400A6A042 /* MovieWorldApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MovieWorldApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F091EBC52B9FBA4400A6A042 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F091EBC72B9FBA4400A6A042 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -129,7 +137,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				F0A43D0D2BA98EB6007346B3 /* Alamofire in Frameworks */,
+				F04D64A52BE130AE00209CF3 /* SDWebImageMapKit in Frameworks */,
 				F0A6C9A82BB7617A00FF0B9A /* FirebaseAuth in Frameworks */,
+				F04D64A32BE130AE00209CF3 /* SDWebImage in Frameworks */,
 				F0A43D0F2BA98EB6007346B3 /* AlamofireDynamic in Frameworks */,
 				F079046D2BA093E2000EA4B5 /* SnapKit in Frameworks */,
 				F0A6C9AC2BB7617A00FF0B9A /* FirebaseStorage in Frameworks */,
@@ -289,6 +299,8 @@
 		F0B5B3302BA4F5C30057FE6F /* Cells */ = {
 			isa = PBXGroup;
 			children = (
+				F050B14D2BD6FA260079BE2F /* HorizontalViewCell.swift */,
+				F050B14E2BD6FA260079BE2F /* HorizontalViewCell.xib */,
 			);
 			path = Cells;
 			sourceTree = "<group>";
@@ -605,6 +617,7 @@
 		F0B5B3582BA4F9D40057FE6F /* Entity */ = {
 			isa = PBXGroup;
 			children = (
+				F08113DD2BDEC30A00C06B39 /* Entitiy.swift */,
 			);
 			path = Entity;
 			sourceTree = "<group>";
@@ -634,6 +647,8 @@
 				F0A6C9A72BB7617A00FF0B9A /* FirebaseAuth */,
 				F0A6C9A92BB7617A00FF0B9A /* FirebaseFirestore */,
 				F0A6C9AB2BB7617A00FF0B9A /* FirebaseStorage */,
+				F04D64A22BE130AE00209CF3 /* SDWebImage */,
+				F04D64A42BE130AE00209CF3 /* SDWebImageMapKit */,
 			);
 			productName = MovieWorldApp;
 			productReference = F091EBC22B9FBA4400A6A042 /* MovieWorldApp.app */;
@@ -711,6 +726,7 @@
 				F07904662BA093C5000EA4B5 /* XCRemoteSwiftPackageReference "Alamofire" */,
 				F079046B2BA093E2000EA4B5 /* XCRemoteSwiftPackageReference "SnapKit" */,
 				F01758E02BB4FC8600896E03 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
+				F04D64A12BE130AE00209CF3 /* XCRemoteSwiftPackageReference "SDWebImage" */,
 			);
 			productRefGroup = F091EBC32B9FBA4400A6A042 /* Products */;
 			projectDirPath = "";
@@ -728,6 +744,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F050B1502BD6FA260079BE2F /* HorizontalViewCell.xib in Resources */,
 				F091EBD22B9FBA4600A6A042 /* LaunchScreen.storyboard in Resources */,
 				F091EBCF2B9FBA4600A6A042 /* Assets.xcassets in Resources */,
 				F056DB022BB5F18300333A28 /* GoogleService-Info.plist in Resources */,
@@ -781,7 +798,9 @@
 				F091EBC82B9FBA4400A6A042 /* SceneDelegate.swift in Sources */,
 				F05EB8FB2BB8BC16001FC6FE /* HomeRouter.swift in Sources */,
 				F0A43D202BAA0E0B007346B3 /* OnboardPresenter.swift in Sources */,
+				F050B14F2BD6FA260079BE2F /* HorizontalViewCell.swift in Sources */,
 				F0A43D1E2BAA0DF9007346B3 /* OnboardRouter.swift in Sources */,
+				F08113DE2BDEC30A00C06B39 /* Entitiy.swift in Sources */,
 				F0A43D192BA9C9DB007346B3 /* AuthenticationView.swift in Sources */,
 				F05EB8FD2BB8BC1F001FC6FE /* HomePresenter.swift in Sources */,
 			);
@@ -1126,6 +1145,14 @@
 				minimumVersion = 10.23.0;
 			};
 		};
+		F04D64A12BE130AE00209CF3 /* XCRemoteSwiftPackageReference "SDWebImage" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SDWebImage/SDWebImage.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.19.1;
+			};
+		};
 		F07904662BA093C5000EA4B5 /* XCRemoteSwiftPackageReference "Alamofire" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/Alamofire/Alamofire.git";
@@ -1145,6 +1172,16 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		F04D64A22BE130AE00209CF3 /* SDWebImage */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = F04D64A12BE130AE00209CF3 /* XCRemoteSwiftPackageReference "SDWebImage" */;
+			productName = SDWebImage;
+		};
+		F04D64A42BE130AE00209CF3 /* SDWebImageMapKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = F04D64A12BE130AE00209CF3 /* XCRemoteSwiftPackageReference "SDWebImage" */;
+			productName = SDWebImageMapKit;
+		};
 		F079046C2BA093E2000EA4B5 /* SnapKit */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = F079046B2BA093E2000EA4B5 /* XCRemoteSwiftPackageReference "SnapKit" */;
