@@ -18,8 +18,9 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         // This delegate does not imply the connecting scene or session are new (see `application:configurationForConnectingSceneSession` instead).
         guard let scene = (scene as? UIWindowScene) else { return }
 
-       let viewController =  OnboardRouter.craeteMyModule()
-     
+      let viewController =  OnboardRouter.craeteMyModule()
+        
+       
         let navigationController = UINavigationController(rootViewController: viewController)
                 window = UIWindow(windowScene: scene)
                 window?.rootViewController = navigationController

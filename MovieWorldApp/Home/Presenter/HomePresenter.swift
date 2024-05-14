@@ -10,24 +10,37 @@ protocol HomePresenterProtocol{
      var view : HomeViewControllerProtocol?{get set}
     var router :HomeRouterProtocol?{get set}
     var ınteractor: HomeInteractorProtocol?  {get set}
+    func getGenre ()
     func getCategoryMovie()
     
 
 }
 final class HomePresenter:HomePresenterProtocol{
+    func getGenre() {
+        ınteractor?.getGenres(complete: {[weak self] data,error in
+            if let error  = error {
+                print(error.localizedDescription)
+            }else{
+                self?.view?.resultGenre(_dataGenre:data)
+            }
+            
+            
+        })
+    }
+    
+ 
 
     
-    var movieResultItems = [MovieResult]()
-    
-    var view: HomeViewControllerProtocol?
    
+    weak  var view: HomeViewControllerProtocol?
     var movie :Movie?
     var router: HomeRouterProtocol?
-    
+
     var ınteractor: HomeInteractorProtocol?
-    init(view: HomeViewControllerProtocol? = nil, router: HomeRouterProtocol? = nil, ınteractor: HomeInteractorProtocol? = nil) {
-        self.view = view 
+    init(view: HomeViewControllerProtocol? = nil,  router: HomeRouterProtocol? = nil, ınteractor: HomeInteractorProtocol? = nil) {
+        self.view = view
         self.router = router
+      
         self.ınteractor = ınteractor
     }
     
@@ -38,7 +51,6 @@ final class HomePresenter:HomePresenterProtocol{
             }else{
                 self?.movie = movie
                 if let movieItems = movie?.results,!movieItems.isEmpty {
-                    self?.movieResultItems.append(contentsOf: movieItems)
                         self?.view?.updateMovieResults(movieItems)
                 }
                 

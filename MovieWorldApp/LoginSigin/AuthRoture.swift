@@ -25,6 +25,7 @@ final class AuthenticationRoture :AuthenticationRotureProtocol {
         viewController.navigationController?.navigationBar.tintColor = .white
         viewController.navigationController?.navigationBar.isHidden = true
         viewController.navigationController?.pushViewController(TabbarViewController(), animated: true) 
+      
     }
     
     static func start(ref: AuthenticationVC) {

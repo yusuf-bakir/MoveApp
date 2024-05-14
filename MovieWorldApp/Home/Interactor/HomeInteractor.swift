@@ -7,14 +7,28 @@
 
 import Foundation
 import Alamofire
+
 protocol HomeInteractorProtocol {
     
     var ınteractorTopresenter : HomePresenterProtocol? {get set}
     var networking: NetworkManagerProtocol? {get}
     func getCategory(type : MovieCategory,page :Int,complete:@escaping((Movie?,Error?))->())
+    func getGenres(complete: @escaping(([GenreEntitiy]?, Error?)->()))
    
 }
+
 class HomeInteractor: HomeInteractorProtocol {
+    func getGenres(complete: @escaping (([GenreEntitiy]?, Error?) -> ())) {
+        networking?.makeRequest(type: Genre?.self, url: HomeEndpoint.genre.path, method: .get, completion: {[weak self] response in
+            switch response {
+            case .success(let data):
+                complete(data?.genres, nil)
+            case .failure(let error):
+                complete(nil, error)
+            }
+        })
+    }
+    
     func getCategory(type: MovieCategory, page: Int, complete: @escaping ((Movie?, Error?)) -> ()) {
         var url = ""
         switch type {
@@ -30,7 +44,7 @@ class HomeInteractor: HomeInteractorProtocol {
             url = HomeEndpoint.upcoming.path
         }
         
-       networking?.makeRequest(type: Movie?.self, url: url, method: .get, completion: { response in
+       networking?.makeRequest(type: Movie?.self, url: url, method: .get, completion: {[weak self] response in
           
             switch response {
             case .success(let data):
@@ -38,9 +52,6 @@ class HomeInteractor: HomeInteractorProtocol {
             case .failure(let failure):
                 complete((nil,failure))
             }
-            
-            
-            
         })
     }
     
@@ -52,18 +63,8 @@ class HomeInteractor: HomeInteractorProtocol {
         self.networking = networkManager
         self.ınteractorTopresenter = ınteractorTopresenter
         
-        
-        
     }
-    
-    
-    
-    
-    
-    
-    
-  
-    }
+}
 
 
         
