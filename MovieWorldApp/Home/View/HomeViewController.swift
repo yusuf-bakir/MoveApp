@@ -6,10 +6,14 @@
 //
 import SnapKit
 import UIKit
+
+
 protocol HomeViewControllerProtocol :AnyObject{
     var viewToPresenter : HomePresenterProtocol?{get set }
     func updateMovieResults(_ movieResults: [MovieResult])
     func resultGenre(_dataGenre:[GenreEntitiy]?)
+   
+  
 }
 final class HomeViewController: UIViewController, HomeViewControllerProtocol{
     
@@ -20,12 +24,10 @@ final class HomeViewController: UIViewController, HomeViewControllerProtocol{
             self?.movieGenres = _dataGenre
             
             GenreHandler.shared.setItems(items: self?.movieGenres ?? [])
-           
-         
             
         }
     }
-    
+
     var movieGenres :[GenreEntitiy]?
     var collectionView: UICollectionView!
     var viewToPresenter: HomePresenterProtocol?
@@ -33,45 +35,42 @@ final class HomeViewController: UIViewController, HomeViewControllerProtocol{
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         HomeRouter.creatHomeModule(ref: self)
+    
         colletionSetup()
         collectionView.dataSource = self
         collectionView.delegate = self
         viewToPresenter?.getCategoryMovie()
         viewToPresenter?.getGenre()
-        view.backgroundColor = .color1
+       view.backgroundColor = .color1
+        favoriteButtom ()
         
-        
-        
-        
-//        let toolbar = UIToolbar()
-//        toolbar.barTintColor = UIColor.white
-////        let button1 = UIBarButtonItem(title: "Button 1", style: .plain, target: self, action: #selector(button1Tapped))
-////               let flexibleSpace = UIBarButtonItem(barButtonSystemItem: .flexibleSpace, target: nil, action: nil) // Esnek boşluk ekleyerek diğer butonu sağ tarafa kaydırıyoruz
-////               let button2 = UIBarButtonItem(title: "Button 2", style: .plain, target: self, action: #selector(button2Tapped))
-//        toolbar.setItems([ flexibleSpace], animated: true)
-//        toolbar.translatesAutoresizingMaskIntoConstraints = false
-//        view.addSubview(toolbar)
-//        
-       
     }
-    
-    
-    
+    func favoriteButtom () {
+        let button = UIButton(type: .system)
+        if let image = UIImage(systemName: "circle.grid.3x3") {
+            let whiteImage = image.withTintColor(.white, renderingMode: .alwaysOriginal)
+                button.setImage(whiteImage, for: .normal)
+               }
+               button.frame = CGRect(x: view.bounds.width - 100, y: 50, width: 80, height: 40) // Sağ üst köşe için konum ayarla
+               button.addTarget(self, action: #selector(buttonTapped), for: .touchUpInside)
+               view.addSubview(button)
+
+    }
+    @objc func buttonTapped() {
+            print("Button tapped!")
+        }
+
     func updateMovieResults(_ movieResults: [MovieResult]) {
         DispatchQueue.main.async { [weak self] in
             self?.movieResulstData = movieResults
             self?.collectionView.reloadData()
-            
-
-        
          
-            
         }
         
     }
-}
+} 
+
 extension HomeViewController:UICollectionViewDataSource,UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return movieResulstData?.count ?? 0
@@ -140,3 +139,6 @@ extension HomeViewController:UICollectionViewDataSource,UICollectionViewDelegate
            
         }
 }
+//#Preview{
+//    HomeViewController()
+//}

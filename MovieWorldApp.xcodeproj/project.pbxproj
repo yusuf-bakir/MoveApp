@@ -62,6 +62,8 @@
 		F0F17EBA2BD1766E00668C2D /* PeopleInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0F17EB92BD1766E00668C2D /* PeopleInteractor.swift */; };
 		F0F17EBC2BD176BB00668C2D /* PeoplePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0F17EBB2BD176BB00668C2D /* PeoplePresenter.swift */; };
 		F0F17EC02BD17AB300668C2D /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0F17EBF2BD17AB300668C2D /* SearchViewController.swift */; };
+		F0F6661F2BF3A09F00514A81 /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0F6661E2BF3A09F00514A81 /* MenuViewController.swift */; };
+		F0F666212BF3A1B800514A81 /* SideMenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0F666202BF3A1B800514A81 /* SideMenuViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -145,6 +147,8 @@
 		F0F17EB92BD1766E00668C2D /* PeopleInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PeopleInteractor.swift; sourceTree = "<group>"; };
 		F0F17EBB2BD176BB00668C2D /* PeoplePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PeoplePresenter.swift; sourceTree = "<group>"; };
 		F0F17EBF2BD17AB300668C2D /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
+		F0F6661E2BF3A09F00514A81 /* MenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuViewController.swift; sourceTree = "<group>"; };
+		F0F666202BF3A1B800514A81 /* SideMenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SideMenuViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -337,6 +341,7 @@
 		F0B5B3322BA4F5ED0057FE6F /* Home */ = {
 			isa = PBXGroup;
 			children = (
+				F0B68E5D2BF24D430017089D /* SideMenu */,
 				F0B5B3582BA4F9D40057FE6F /* Entity */,
 				F0B5B3572BA4F9BC0057FE6F /* View */,
 				F0B5B3562BA4F9B10057FE6F /* Interactor */,
@@ -646,6 +651,15 @@
 			path = Entity;
 			sourceTree = "<group>";
 		};
+		F0B68E5D2BF24D430017089D /* SideMenu */ = {
+			isa = PBXGroup;
+			children = (
+				F0F6661E2BF3A09F00514A81 /* MenuViewController.swift */,
+				F0F666202BF3A1B800514A81 /* SideMenuViewController.swift */,
+			);
+			path = SideMenu;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -825,6 +839,7 @@
 				F0A6C9A62BB74CD800FF0B9A /* AlertMessage.swift in Sources */,
 				F0A0A58B2BADFA1100306897 /* AuthPresenter.swift in Sources */,
 				F091EBC82B9FBA4400A6A042 /* SceneDelegate.swift in Sources */,
+				F0F6661F2BF3A09F00514A81 /* MenuViewController.swift in Sources */,
 				F06A0B342BE6DC91007E28E3 /* GenreHandler.swift in Sources */,
 				F05EB8FB2BB8BC16001FC6FE /* HomeRouter.swift in Sources */,
 				F0A43D202BAA0E0B007346B3 /* OnboardPresenter.swift in Sources */,
@@ -834,6 +849,7 @@
 				F08113DE2BDEC30A00C06B39 /* Entitiy.swift in Sources */,
 				F0A43D192BA9C9DB007346B3 /* AuthenticationView.swift in Sources */,
 				F05EB8FD2BB8BC1F001FC6FE /* HomePresenter.swift in Sources */,
+				F0F666212BF3A1B800514A81 /* SideMenuViewController.swift in Sources */,
 				F06A0B2F2BE6D5FA007E28E3 /* LabelCollectionViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

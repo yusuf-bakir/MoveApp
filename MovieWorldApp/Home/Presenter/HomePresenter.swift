@@ -35,11 +35,12 @@ final class HomePresenter:HomePresenterProtocol{
     weak  var view: HomeViewControllerProtocol?
     var movie :Movie?
     var router: HomeRouterProtocol?
-    
+
     var ınteractor: HomeInteractorProtocol?
-    init(view: HomeViewControllerProtocol? = nil, router: HomeRouterProtocol? = nil, ınteractor: HomeInteractorProtocol? = nil) {
-        self.view = view 
+    init(view: HomeViewControllerProtocol? = nil,  router: HomeRouterProtocol? = nil, ınteractor: HomeInteractorProtocol? = nil) {
+        self.view = view
         self.router = router
+      
         self.ınteractor = ınteractor
     }
     

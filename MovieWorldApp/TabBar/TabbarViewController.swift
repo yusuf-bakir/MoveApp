@@ -17,7 +17,7 @@ class TabbarViewController: UITabBarController {
         let viewcontroller = ViewController()
         viewcontroller.tabBarItem = UITabBarItem(title: "second",image: UIImage(systemName: "magnifyingglass"), tag: 1)
                    let tabbarPeople = PeopleViewController()
-        tabbarPeople.tabBarItem = UITabBarItem(title: "three", image: UIImage(systemName: "person.circle.fill"), tag: 2)
+        tabbarPeople.tabBarItem = UITabBarItem(title: "third", image: UIImage(systemName: "person.circle.fill"), tag: 2)
        
         self.setViewControllers([homeViewcontroller,viewcontroller,tabbarPeople], animated: true)
         self.tabBar.tintColor = .white

@@ -16,9 +16,24 @@
             <subviews>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="BsC-Rp-fK3">
                     <rect key="frame" x="23" y="0.0" width="329" height="20"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Popular" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Wew-HG-wh6">
+                            <rect key="frame" x="0.0" y="0.0" width="164" height="20"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="164" id="EL5-L7-Zf9"/>
+                                <constraint firstAttribute="height" constant="20" id="M2d-VJ-tyu"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="21"/>
+                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <color key="highlightedColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </label>
+                    </subviews>
                     <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     <constraints>
+                        <constraint firstItem="Wew-HG-wh6" firstAttribute="leading" secondItem="BsC-Rp-fK3" secondAttribute="leading" id="3Bd-hi-2d8"/>
+                        <constraint firstAttribute="bottom" secondItem="Wew-HG-wh6" secondAttribute="bottom" id="Bva-Nr-hlc"/>
                         <constraint firstAttribute="height" constant="20" id="RVe-8p-PBO"/>
+                        <constraint firstItem="Wew-HG-wh6" firstAttribute="top" secondItem="BsC-Rp-fK3" secondAttribute="top" id="lWK-jd-qjh"/>
                     </constraints>
                 </view>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="BPM-F0-dmV">

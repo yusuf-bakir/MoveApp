@@ -6,22 +6,30 @@
 //
 
 import UIKit
+protocol MenuViewControllerProtocol:AnyObject {
+    func isMenuToggle()
+}
 
 class HomeHeader: UICollectionReusableView, UICollectionViewDelegate, UICollectionViewDataSource {
+  
+    
+    var homeDelegate : MenuViewControllerProtocol?
+  @IBOutlet weak var viewTop: UIView!
 
-    
-    
-    @IBOutlet weak var viewTop: UIView!
-    
     @IBOutlet weak var viewBottom: UIView!
     @IBOutlet weak var colletionHead: UICollectionView!
     var items =  [MovieResult]()
+    
+
     override func awakeFromNib() {
         super.awakeFromNib()
+     
+        
+       
         // Initialization code
         viewTop.backgroundColor = .color1
         viewBottom.backgroundColor = .color1
-       colletionHead.backgroundColor = .color1
+        colletionHead.backgroundColor = .color1
         colletionHead.delegate = self
         colletionHead.dataSource = self
         configreHead()
@@ -34,6 +42,9 @@ class HomeHeader: UICollectionReusableView, UICollectionViewDelegate, UICollecti
     func configreHead () {
         colletionHead.register(UINib(nibName: "VerticalCell", bundle: nil), forCellWithReuseIdentifier: "VerticalCell")
         
+    }
+    @IBAction func ButtomTapped(_ sender: Any) {
+
     }
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return items.count
@@ -49,5 +60,6 @@ class HomeHeader: UICollectionReusableView, UICollectionViewDelegate, UICollecti
 
         return cell
     }
-
+  
+   
 }
