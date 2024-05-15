@@ -63,7 +63,9 @@
 		F0F17EBC2BD176BB00668C2D /* PeoplePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0F17EBB2BD176BB00668C2D /* PeoplePresenter.swift */; };
 		F0F17EC02BD17AB300668C2D /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0F17EBF2BD17AB300668C2D /* SearchViewController.swift */; };
 		F0F6661F2BF3A09F00514A81 /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0F6661E2BF3A09F00514A81 /* MenuViewController.swift */; };
-		F0F666212BF3A1B800514A81 /* SideMenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0F666202BF3A1B800514A81 /* SideMenuViewController.swift */; };
+		F0FC887E2BF5506000492B15 /* FilterEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0FC887D2BF5506000492B15 /* FilterEntity.swift */; };
+		F0FC88812BF556F000492B15 /* CategoryCellTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0FC887F2BF556F000492B15 /* CategoryCellTableViewCell.swift */; };
+		F0FC88822BF556F000492B15 /* CategoryCellTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F0FC88802BF556F000492B15 /* CategoryCellTableViewCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -148,7 +150,9 @@
 		F0F17EBB2BD176BB00668C2D /* PeoplePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PeoplePresenter.swift; sourceTree = "<group>"; };
 		F0F17EBF2BD17AB300668C2D /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
 		F0F6661E2BF3A09F00514A81 /* MenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuViewController.swift; sourceTree = "<group>"; };
-		F0F666202BF3A1B800514A81 /* SideMenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SideMenuViewController.swift; sourceTree = "<group>"; };
+		F0FC887D2BF5506000492B15 /* FilterEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterEntity.swift; sourceTree = "<group>"; };
+		F0FC887F2BF556F000492B15 /* CategoryCellTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryCellTableViewCell.swift; sourceTree = "<group>"; };
+		F0FC88802BF556F000492B15 /* CategoryCellTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CategoryCellTableViewCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -321,6 +325,8 @@
 			children = (
 				F050B14D2BD6FA260079BE2F /* HorizontalViewCell.swift */,
 				F050B14E2BD6FA260079BE2F /* HorizontalViewCell.xib */,
+				F0FC887F2BF556F000492B15 /* CategoryCellTableViewCell.swift */,
+				F0FC88802BF556F000492B15 /* CategoryCellTableViewCell.xib */,
 				F06A0B2D2BE6D5FA007E28E3 /* LabelCollectionViewCell.swift */,
 				F06A0B2E2BE6D5FA007E28E3 /* LabelCollectionViewCell.xib */,
 				F0CAFC8C2BE822A500D80891 /* VerticalCell.swift */,
@@ -647,6 +653,7 @@
 			children = (
 				F08113DD2BDEC30A00C06B39 /* Entitiy.swift */,
 				F06A0B312BE6DBD9007E28E3 /* GenreEntitiy.swift */,
+				F0FC887D2BF5506000492B15 /* FilterEntity.swift */,
 			);
 			path = Entity;
 			sourceTree = "<group>";
@@ -655,7 +662,6 @@
 			isa = PBXGroup;
 			children = (
 				F0F6661E2BF3A09F00514A81 /* MenuViewController.swift */,
-				F0F666202BF3A1B800514A81 /* SideMenuViewController.swift */,
 			);
 			path = SideMenu;
 			sourceTree = "<group>";
@@ -789,6 +795,7 @@
 				F0C91FCB2BE9808300704A5F /* HomeHeader.xib in Resources */,
 				F091EBCF2B9FBA4600A6A042 /* Assets.xcassets in Resources */,
 				F056DB022BB5F18300333A28 /* GoogleService-Info.plist in Resources */,
+				F0FC88822BF556F000492B15 /* CategoryCellTableViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -826,6 +833,7 @@
 				F0F17EBC2BD176BB00668C2D /* PeoplePresenter.swift in Sources */,
 				F05EB8FF2BB8BC2C001FC6FE /* HomeViewController.swift in Sources */,
 				F07904712BA0C561000EA4B5 /* OnboardViewControler.swift in Sources */,
+				F0FC88812BF556F000492B15 /* CategoryCellTableViewCell.swift in Sources */,
 				F0F17EB62BD1762B00668C2D /* PeopleEntity.swift in Sources */,
 				F00386232BBC79EB00BCB7A6 /* TabbarViewController.swift in Sources */,
 				F0CAEAF12BA2168900F2F5B9 /* OnboardView.swift in Sources */,
@@ -845,11 +853,11 @@
 				F0A43D202BAA0E0B007346B3 /* OnboardPresenter.swift in Sources */,
 				F050B14F2BD6FA260079BE2F /* HorizontalViewCell.swift in Sources */,
 				F0A43D1E2BAA0DF9007346B3 /* OnboardRouter.swift in Sources */,
+				F0FC887E2BF5506000492B15 /* FilterEntity.swift in Sources */,
 				F06A0B322BE6DBD9007E28E3 /* GenreEntitiy.swift in Sources */,
 				F08113DE2BDEC30A00C06B39 /* Entitiy.swift in Sources */,
 				F0A43D192BA9C9DB007346B3 /* AuthenticationView.swift in Sources */,
 				F05EB8FD2BB8BC1F001FC6FE /* HomePresenter.swift in Sources */,
-				F0F666212BF3A1B800514A81 /* SideMenuViewController.swift in Sources */,
 				F06A0B2F2BE6D5FA007E28E3 /* LabelCollectionViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

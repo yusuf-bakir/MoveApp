@@ -18,6 +18,8 @@ final class HomeRouter:HomeRouterProtocol{
       
        let ınteractor = HomeInteractor()
         let router = HomeRouter()
+       
+        
         let presenter = HomePresenter(view:ref , router:router ,ınteractor: ınteractor)
         ref.viewToPresenter = presenter
         ref.viewToPresenter?.ınteractor = ınteractor

@@ -11,11 +11,28 @@ protocol HomePresenterProtocol{
     var router :HomeRouterProtocol?{get set}
     var ınteractor: HomeInteractorProtocol?  {get set}
     func getGenre ()
-    func getCategoryMovie()
+    func getMovie()
+    func getCategoryMovie(type:MovieCategory?)
     
 
 }
 final class HomePresenter:HomePresenterProtocol{
+    func getCategoryMovie(type: MovieCategory?) {
+        ınteractor?.getCategory(type:type ?? .popular  , page: 2, complete: { [weak self] movie, error in
+            if let  error = error {
+                print(error.localizedDescription)
+            }else{
+                self?.movie = movie
+                if let movieItems = movie?.results,!movieItems.isEmpty {
+                    self?.view?.categoryMovie(movieItems)                }
+                
+            }
+            
+            
+            
+        })
+    }
+    
     func getGenre() {
         ınteractor?.getGenres(complete: {[weak self] data,error in
             if let error  = error {
@@ -44,7 +61,7 @@ final class HomePresenter:HomePresenterProtocol{
         self.ınteractor = ınteractor
     }
     
-    func getCategoryMovie() {
+    func getMovie() {
         ınteractor?.getCategory(type: .popular, page: 1, complete: { [weak self] movie, error in
             if let  error = error {
                 print(error.localizedDescription)

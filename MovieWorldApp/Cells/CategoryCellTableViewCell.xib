@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="22155" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22131"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="CategoryCellTableViewCell" rowHeight="100" id="KGk-i7-Jjw" customClass="CategoryCellTableViewCell" customModule="MovieWorldApp" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="346" height="100"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="346" height="100"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="filterIcon" translatesAutoresizingMaskIntoConstraints="NO" id="kR1-9d-40S">
+                        <rect key="frame" x="0.0" y="0.0" width="100" height="100"/>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Popular" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QYd-4G-nSe">
+                        <rect key="frame" x="159" y="14.999999999999998" width="187" height="26.333333333333329"/>
+                        <fontDescription key="fontDescription" type="system" weight="black" pointSize="22"/>
+                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="kR1-9d-40S" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="17w-1M-5zE"/>
+                    <constraint firstItem="kR1-9d-40S" firstAttribute="height" secondItem="H2p-sc-9uM" secondAttribute="height" id="3g3-Se-wUW"/>
+                    <constraint firstItem="QYd-4G-nSe" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="15" id="5Ps-uR-4re"/>
+                    <constraint firstItem="QYd-4G-nSe" firstAttribute="leading" secondItem="kR1-9d-40S" secondAttribute="trailing" constant="59" id="6O6-Cd-Qzh"/>
+                    <constraint firstAttribute="bottom" secondItem="kR1-9d-40S" secondAttribute="bottom" id="8BP-N6-RV8"/>
+                    <constraint firstAttribute="trailing" secondItem="QYd-4G-nSe" secondAttribute="trailing" id="IUB-cW-LuA"/>
+                    <constraint firstAttribute="bottom" secondItem="QYd-4G-nSe" secondAttribute="bottom" constant="58.666666666666671" id="Qxm-ed-O7D"/>
+                    <constraint firstItem="kR1-9d-40S" firstAttribute="width" secondItem="H2p-sc-9uM" secondAttribute="width" multiplier="0.289017" id="S8w-AS-d2i"/>
+                    <constraint firstItem="kR1-9d-40S" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="n6V-2D-rMX"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="icon" destination="kR1-9d-40S" id="zUS-6z-1l9"/>
+                <outlet property="title" destination="QYd-4G-nSe" id="WZW-1D-oUt"/>
+            </connections>
+            <point key="canvasLocation" x="-105.34351145038167" y="40.845070422535215"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="filterIcon" width="716" height="469"/>
+    </resources>
+</document>

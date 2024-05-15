@@ -16,6 +16,7 @@ class HomeHeader: UICollectionReusableView, UICollectionViewDelegate, UICollecti
     var homeDelegate : MenuViewControllerProtocol?
   @IBOutlet weak var viewTop: UIView!
 
+    @IBOutlet weak var titleCategory: UILabel!
     @IBOutlet weak var viewBottom: UIView!
     @IBOutlet weak var colletionHead: UICollectionView!
     var items =  [MovieResult]()
