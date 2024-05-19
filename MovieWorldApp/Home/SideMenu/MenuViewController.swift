@@ -17,7 +17,7 @@ protocol menuCategory :AnyObject{
 class MenuViewController: UIViewController,UITableViewDataSource,UITableViewDelegate  {
   weak  var delegate : menuCategory?
     var item = listCategory
-    let tableView = UITableView()
+    private let tableView = UITableView()
     override func viewDidLoad() {
         super.viewDidLoad()
 

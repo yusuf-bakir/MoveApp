@@ -26,8 +26,6 @@ class AuthInteractor :AuthInteractorProtocol{
         }
         
     }
-    
-
     var ınteractorTopresenter: AuthenticationPresenterProtocol?
     
     

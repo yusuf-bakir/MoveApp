@@ -42,7 +42,7 @@ final class HomeViewController: UIViewController, HomeViewControllerProtocol{
     var genre = "Popular"
     var movieCategory:[MovieResult]?
     var movieGenres :[GenreEntitiy]?
-    var collectionView: UICollectionView!
+    private  var collectionView: UICollectionView!
     var viewToPresenter: HomePresenterProtocol?
     var movieResulstData :[MovieResult]?
     
@@ -56,12 +56,13 @@ final class HomeViewController: UIViewController, HomeViewControllerProtocol{
         viewToPresenter?.getMovie()
         viewToPresenter?.getGenre()
        view.backgroundColor = .color1
-        
-        favoriteButtom ()
+        favoriteButtom()
+      
     
         
     }
-    func favoriteButtom () {
+    
+    func favoriteButtom() {
         let button = UIButton(type: .system)
         if let image = UIImage(systemName: "circle.grid.3x3") {
             let whiteImage = image.withTintColor(.white, renderingMode: .alwaysOriginal)
@@ -72,6 +73,16 @@ final class HomeViewController: UIViewController, HomeViewControllerProtocol{
                view.addSubview(button)
 
     }
+//    private lazy var buttom : UIButton = {
+//        let button = UIButton(type: .system)
+//        if let image = UIImage(systemName: "circle.grid.3x3") {
+//            let whiteImage = image.withTintColor(.white, renderingMode: .alwaysOriginal)
+//                button.setImage(whiteImage, for: .normal)
+//               }
+//               button.frame = CGRect(x: view.bounds.width - 100, y: 50, width: 80, height: 40) // Sağ üst köşe için konum ayarla
+//               button.addTarget(self, action: #selector(buttonTapped), for: .touchUpInside)
+//               return buttom
+//    }()
     @objc func buttonTapped() {
         let menu = MenuViewController()
         menu.delegate = self

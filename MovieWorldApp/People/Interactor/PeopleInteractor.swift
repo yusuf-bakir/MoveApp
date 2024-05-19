@@ -7,22 +7,23 @@
 
 import Foundation
 protocol PeopleInteractorProtocol {
-    var fetch :NetworkManager?{get set}
-    
+    var networking :NetworkManager?{get set}
+    var ınteractorTopresenter :  PeoplePresenterProtocol? {get set}
+
+
 }
-class PeopleInteractor:PeopleInteractorProtocol {
-    var fetch: NetworkManager?
-    
+final class PeopleInteractor:PeopleInteractorProtocol {
 
     
-    init(fetch: NetworkManager? = nil) {
-        self.fetch = fetch
+    var ınteractorTopresenter: PeoplePresenterProtocol?
+    let networkManager = NetworkManager()
+    var networking: NetworkManager?
+
+    init(networking: NetworkManager? = nil) {
+        self.networking = networkManager
     }
-    func movieList() {
-        fetch?.makeRequest(type: PeopleEntity.self, url: "", method: .get, completion: { data in
-            
-        })
-        
-        
-    }
+ 
+  
+
+
 }

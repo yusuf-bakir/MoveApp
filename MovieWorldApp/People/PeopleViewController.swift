@@ -6,15 +6,23 @@
 //
 
 import UIKit
-
-class PeopleViewController: UIViewController {
-
+protocol PeopleViewProtocol:AnyObject {
+    var viewToPresenter :PeoplePresenter?{get set}
+}
+final class PeopleViewController: UIViewController {
+  weak  var viewToPresenter :PeoplePresenter?
     override func viewDidLoad() {
         super.viewDidLoad()
-        view.backgroundColor = .red
-       
+        view.backgroundColor = .color1
+        PeopleRouter.creatPeopleModule(ref: self)
+
+    
+  
     }
     
 
 
+}
+extension PeopleViewController :PeopleViewProtocol{
+    
 }

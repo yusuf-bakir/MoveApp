@@ -20,6 +20,8 @@ protocol AuthenticationPresenterProtocol {
 }
 class AuthPresenter: AuthenticationPresenterProtocol{
     var ınteractor: AuthInteractorProtocol
+    var router: AuthenticationRotureProtocol?
+    var view: AuthenticationVCProtocol?
     
     func loginSuccessfull() {
         router?.navigateToHome(from: self.view)
@@ -33,9 +35,7 @@ class AuthPresenter: AuthenticationPresenterProtocol{
     func loginFailed(withError: String) {
         view?.showError(message: withError)
     }
-
-    var router: AuthenticationRotureProtocol?
-    var view: AuthenticationVCProtocol?
+   
      
     init(ınteractor: AuthInteractorProtocol, router: AuthenticationRotureProtocol? = nil, view: AuthenticationVCProtocol? = nil) {
         self.ınteractor = ınteractor
