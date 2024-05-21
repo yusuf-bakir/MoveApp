@@ -42,7 +42,7 @@ final class HomeViewController: UIViewController, HomeViewControllerProtocol{
     var genre = "Popular"
     var movieCategory:[MovieResult]?
     var movieGenres :[GenreEntitiy]?
-    private  var collectionView: UICollectionView!
+    private  var  collectionView: UICollectionView!
     var viewToPresenter: HomePresenterProtocol?
     var movieResulstData :[MovieResult]?
     

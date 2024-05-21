@@ -22,11 +22,18 @@ struct People: Codable {
 }
 
 // MARK: - PeopleResult
-struct PeopleResult: Codable {
+struct PeopleResult: Codable,PeopleCellProtocol {
+ 
+    
+
+    
+
+ 
+    
     let adult: Bool?
     let gender, id: Int?
     let knownFor: [PeopleKnownFor]?
-    let knownForDepartment, name: String?
+    var knownForDepartment, name: String?
     let popularity: Double?
     let profilePath: String?
 
@@ -42,7 +49,7 @@ struct PeopleResult: Codable {
         name ?? ""
     }
     
-    var imagePath: String {
+    var imagePath: String{
         NetworkHelper.shared.getImagePath(url: profilePath ?? "")
     }
   

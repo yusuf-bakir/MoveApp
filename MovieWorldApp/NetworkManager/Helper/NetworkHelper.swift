@@ -48,4 +48,12 @@ enum HomeEndpoint: String {
     var path: String {
         NetworkHelper.shared.requestUrl(url: self.rawValue)
     }
+
+}
+enum PeopleEnpoint:String {
+    case popular = "person/popular"
+    var path : String {
+        NetworkHelper.shared.requestUrl(url: self.rawValue)
+    }
+    
 }
