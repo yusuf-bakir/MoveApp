@@ -30,7 +30,7 @@ class NetworkHelper {
 }
 
 
-enum MovieCategory {
+enum MovieCategory:String {
     case nowPlaying
     case popular
     case trending

@@ -111,6 +111,7 @@ protocol AuthenticationViewProtocol:AnyObject {
         let label = UILabel()
         label.text = "Forgot your Password ?"
         label.textColor = .white
+        label.font = UIFont.systemFont(ofSize: 15)
         label.isUserInteractionEnabled = true
         return label
     }()

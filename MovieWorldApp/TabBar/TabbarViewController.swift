@@ -13,13 +13,15 @@ class TabbarViewController: UITabBarController {
         super.viewDidLoad()
 //        showMainApp()
         let homeViewcontroller = HomeViewController()
-        homeViewcontroller.tabBarItem = UITabBarItem(title: "first",image: UIImage(systemName: "house"), tag: 0)
+        homeViewcontroller.tabBarItem = UITabBarItem(title: "Movie",image: UIImage(systemName: "house"), tag: 0)
+     
+        let tabbarPeople = PeopleViewController()
+        tabbarPeople.tabBarItem = UITabBarItem(title: "People",image: UIImage(systemName: "person.circle.fill"), tag: 1)
+               
         let viewcontroller = ViewController()
-        viewcontroller.tabBarItem = UITabBarItem(title: "second",image: UIImage(systemName: "magnifyingglass"), tag: 1)
-                   let tabbarPeople = PeopleViewController()
-        tabbarPeople.tabBarItem = UITabBarItem(title: "third", image: UIImage(systemName: "person.circle.fill"), tag: 2)
-       
-        self.setViewControllers([homeViewcontroller,viewcontroller,tabbarPeople], animated: true)
+        viewcontroller.tabBarItem = UITabBarItem(title: "Search", image: UIImage(systemName: "magnifyingglass"), tag: 2)
+
+        self.setViewControllers([homeViewcontroller,tabbarPeople,viewcontroller], animated: true)
         self.tabBar.tintColor = .white
         self.tabBar.barStyle = .black
 

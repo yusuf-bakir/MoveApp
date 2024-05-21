@@ -6,7 +6,7 @@
 //
 
 import Foundation
-protocol HomeRouterProtocol :AnyObject{
+protocol HomeRouterProtocol {
  
     static func creatHomeModule(ref : HomeViewControllerProtocol)
 }
@@ -18,15 +18,27 @@ final class HomeRouter:HomeRouterProtocol{
       
        let ınteractor = HomeInteractor()
         let router = HomeRouter()
+       
+        
         let presenter = HomePresenter(view:ref , router:router ,ınteractor: ınteractor)
         ref.viewToPresenter = presenter
         ref.viewToPresenter?.ınteractor = ınteractor
         ref.viewToPresenter?.ınteractor?.ınteractorTopresenter = presenter
-        ref.viewToPresenter?.ınteractor = ınteractor
-        ref.viewToPresenter?.ınteractor?.ınteractorTopresenter = presenter
+        
+        
+        
+//        presenter.ınteractor = ınteractor
+//        ref.viewToPresenter?.ınteractor = ınteractor
+//        ref.viewToPresenter?.ınteractor?.ınteractorTopresenter = presenter
+        
+//        ref.presenterAuth = presenter
+//       
+//        ref.presenterAuth?.ınteractor = ınteractor
+//        ref.presenterAuth?.ınteractor.ınteractorTopresenter = presenter
     
     }
 
 
     
 }
+
