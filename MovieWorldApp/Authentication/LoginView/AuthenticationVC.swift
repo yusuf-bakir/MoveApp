@@ -28,22 +28,15 @@ final class AuthenticationVC: UIViewController, UINavigationControllerDelegate {
         
       
         }
-    
-    
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         AuthenticationRoture.start(ref: self)
-        
    
-        
        
     }
     
 
 }
-
-    
 
 extension AuthenticationVC:AuthenticationViewProtocol {
     

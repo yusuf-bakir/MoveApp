@@ -24,6 +24,8 @@ final class PeopleViewController: UIViewController, UICollectionViewDelegate, UI
     override func viewDidLoad() {
         super.viewDidLoad()
 //        
+        
+    
         view.backgroundColor = .color1
       
        PeopleRouter.creatPeopleModule(ref: self)

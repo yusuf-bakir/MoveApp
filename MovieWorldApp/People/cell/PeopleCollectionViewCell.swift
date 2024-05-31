@@ -20,9 +20,15 @@ class PeopleCollectionViewCell: UICollectionViewCell {
         // Initialization code
     
         titleName.textColor = .white
+        peopleImage.layer.borderWidth = 4.0
+        
+            
+        peopleImage.layer.borderColor = UIColor.white.cgColor
+        peopleImage.layer.cornerRadius = 8.0
+        peopleImage.clipsToBounds = true
 
       
-      self.contentView.layer.cornerRadius = 30
+     
               
 
                 

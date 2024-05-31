@@ -49,7 +49,7 @@ struct PeopleResult: Codable,PeopleCellProtocol {
         name ?? ""
     }
     
-    var imagePath: String{
+    var imagePath: String {
         NetworkHelper.shared.getImagePath(url: profilePath ?? "")
     }
   

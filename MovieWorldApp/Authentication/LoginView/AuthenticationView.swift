@@ -172,12 +172,6 @@ protocol AuthenticationViewProtocol:AnyObject {
         fatalError("init(coder:) has not been implemented")
     }
     
-   
-   
-    
-       
-
-    
 }
 
 extension AuthenticationView {

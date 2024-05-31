@@ -12,8 +12,9 @@ protocol MovieCellProtocol {
     var posterImage: String { get  }
     var titleText: String { get }
     var ratingText: String { get }
-     var genreItems: [String] { get }
+    var genreItems: [String] { get }
     var overViewText: String { get }
+    var movieID :Int {get }
 }
 
 class HorizontalViewCell: UICollectionViewCell {
@@ -27,7 +28,7 @@ class HorizontalViewCell: UICollectionViewCell {
     @IBOutlet weak  var movieImage: UIImageView!
     @IBOutlet weak  var movieTitle: UILabel!
     var items = [String]()
-    
+    var id  = 0
     override func awakeFromNib() {
         super.awakeFromNib()
        
@@ -42,6 +43,7 @@ class HorizontalViewCell: UICollectionViewCell {
         if let ımageUrl = data?.posterImage{
         movieImage.sd_setImage(with: URL(string: ımageUrl))
             
+            
         }
         if data?.genreItems == []{
             colletionTopConstraint.constant = 0
@@ -51,6 +53,8 @@ class HorizontalViewCell: UICollectionViewCell {
             self.colletion.reloadData()
         }
         overViewLabel.text = data?.overViewText
+   
+     
     }
  
     func configreLabelCell () {

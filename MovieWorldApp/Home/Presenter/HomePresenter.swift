@@ -13,10 +13,15 @@ protocol HomePresenterProtocol{
     func getGenre ()
     func getMovie()
     func getCategoryMovie(type:MovieCategory?)
+    func showDetail (id :Int?)
     
 
 }
 final class HomePresenter:HomePresenterProtocol{
+    func showDetail(id :Int?) {
+        router?.toDetail(from: view.self, id: id)
+    }
+    
     func getCategoryMovie(type: MovieCategory?) {
         ınteractor?.getCategory(type:type ?? .popular  , page: 2, complete: { [weak self] movie, error in
             if let  error = error {

@@ -29,7 +29,6 @@ class VerticalCell: UICollectionViewCell {
         verticalImage.sd_setImage(with: URL(string: ımagePathUrl))
         
     }
-    
-    
+   
     
 }

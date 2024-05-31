@@ -17,8 +17,9 @@ class NetworkHelper {
 
     private let baseURL = "https://api.themoviedb.org/3/"
     private let apiKey = "976934cfcdc4a54aa56284f162637a3e"
-    private let imageBasePath = "https://image.tmdb.org/t/p/original/"
-    
+    private let imageBasePath = "https://image.tmdb.org/t/p/original"
+    private let detailPath = "https://api.themoviedb.org/3/movie/"
+    private let imagePNG  = "https://image.tmdb.org/t/p/original"
     func requestUrl(url: String) -> String {
         baseURL + url + "?api_key=\(apiKey)"
         
@@ -26,6 +27,9 @@ class NetworkHelper {
     
     func getImagePath(url: String) -> String {
         imageBasePath + url
+    }
+    func getMovieDetailPath(id : Int) -> String {
+        baseURL + "movie/" + "\(id)" + "?api_key=\(apiKey)"
     }
 }
 
@@ -57,3 +61,4 @@ enum PeopleEnpoint:String {
     }
     
 }
+
