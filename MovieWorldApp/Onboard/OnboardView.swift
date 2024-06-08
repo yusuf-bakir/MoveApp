@@ -16,6 +16,7 @@ class OnboardView <T: OnboardMoveContoroller>:UIView{
     
     var delegate: OnBoardViewProtocol?
     let controler: T
+    //MARK: -- backToView
     private lazy var  backToView : UIView = {
         let view = UIView()
         view.layer.cornerRadius = 10
@@ -31,6 +32,7 @@ class OnboardView <T: OnboardMoveContoroller>:UIView{
         view.layer.shadowRadius = 5 // Gölgelendirme yarıçapı
         return view
     }()
+    //MARK: // continue Tapped Buttom
     private lazy var buttom :UIButton = {
         let buttomMovie = UIButton()
         buttomMovie.setTitle("Continue", for: .normal)
@@ -46,7 +48,7 @@ class OnboardView <T: OnboardMoveContoroller>:UIView{
     lazy var action : UIAction = UIAction {_ in
              self.delegate?.onTappedContiuneButton()
     }
-
+    //MARK: // Image View
     private lazy var profileImage : UIImageView = {
         let imageView = UIImageView()
         imageView.image = UIImage.camera
@@ -55,6 +57,7 @@ class OnboardView <T: OnboardMoveContoroller>:UIView{
         return imageView
         
     }()
+    //MARK: //
     private lazy var profileSubTitle : UILabel = {
         let label = UILabel()
         label.text = "Filim Dünyasına Hoşgeldiniz. Filim ve dizileri HD kalitede izleyebilirsiniz."

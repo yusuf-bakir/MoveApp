@@ -17,6 +17,8 @@ final class HomeRouter:HomeRouterProtocol{
     func toDetail(from view: HomeViewControllerProtocol?,id:Int?) {
         let detailsViewController = DetailsViewController()
         detailsViewController.id = id ?? 1
+        let fv = Favorite()
+        detailsViewController.delegate = fv
         guard let viewController = view as? UIViewController else { return }
         viewController.navigationController?.navigationBar.isHidden = true
         viewController.navigationController?.pushViewController(detailsViewController, animated: true)

@@ -10,13 +10,17 @@ import UIKit
 protocol DetailRouterProtocol {
     static func  creatMyDetailModule (ref : DetailViewControllerProtocol)
     func showHome (from view:DetailViewControllerProtocol?)
+ 
 }
 final class DetailRouter:DetailRouterProtocol {
+
     func showHome(from view: DetailViewControllerProtocol?) {
         let secondViewController = HomeViewController()
+        
         guard let viewController = view as? UIViewController else { return }
         viewController.navigationController?.navigationBar.isHidden = true
         viewController.navigationController?.pushViewController(HomeViewController(), animated: true)
+        
     }
 //    
 //    
@@ -34,6 +38,7 @@ final class DetailRouter:DetailRouterProtocol {
         ref.viewToPresenter?.ınteractor = ınteractor
         ref.viewToPresenter?.ınteractor?.toPresenter = presenter
         
+    
         
     }
 

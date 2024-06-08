@@ -14,11 +14,10 @@ protocol PeoplePresenterProtocol{
     func getPeople ()
 
 }
+
 final class PeoplePresenter:PeoplePresenterProtocol {
    
-    
 
-    
     var router: PeopleRouterProtocol?
     
     var ınteractor: PeopleInteractorProtocol?

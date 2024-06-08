@@ -13,7 +13,7 @@ protocol AuthenticationRotureProtocol {
     static func start(ref : AuthenticationVC)
     
 }
- class AuthenticationRoture :AuthenticationRotureProtocol {
+final  class AuthenticationRoture :AuthenticationRotureProtocol {
     
     
     func navigateToHome(from view: AuthenticationVCProtocol?) {

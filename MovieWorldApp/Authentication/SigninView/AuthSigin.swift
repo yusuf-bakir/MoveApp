@@ -96,6 +96,7 @@ final class AuthSigin<T:SigninViewController> :UIView{
         buttom.translatesAutoresizingMaskIntoConstraints = false
         buttom.layer.cornerRadius = 16
         buttom.addAction(action, for: .touchUpInside)
+       
         return buttom
     }()
     lazy var action : UIAction = UIAction {_ in
@@ -111,6 +112,7 @@ final class AuthSigin<T:SigninViewController> :UIView{
         addSubview(siginUpBottom)
         addSubview(label)
             setup()
+      
         backgroundColor = UIColor.color1
     }
     
@@ -166,3 +168,4 @@ extension AuthSigin {
     
    
 }
+

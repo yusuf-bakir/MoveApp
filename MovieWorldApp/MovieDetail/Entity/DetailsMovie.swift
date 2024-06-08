@@ -8,11 +8,6 @@ import Foundation
 
 // MARK: - Welcome
 struct DetailsMovie: Codable ,DetailDataMovieProtocol {
-   
-    
-
-
-    
 
     let adult: Bool
     

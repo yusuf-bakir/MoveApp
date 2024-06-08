@@ -7,6 +7,9 @@
 
 import UIKit
 import SnapKit
+protocol detailToFavoriteProtocol{
+    func didDataTransfer(data:DetailDataMovieProtocol?)
+}
 
 protocol DetailDataMovieProtocol {
     var titleText: String { get }
@@ -25,11 +28,11 @@ protocol DetailViewControllerProtocol:AnyObject {
     var viewToPresenter :DetailPresenterProtocol? { get set }
     func movieError (message:String)
     func getDetailMovie(data:DetailDataMovieProtocol)
+    var delegate :detailToFavoriteProtocol?{get set}
 
-   
   
 }
-class DetailsViewController: UIViewController,DetailViewControllerProtocol, UICollectionViewDataSource, UICollectionViewDelegate,UICollectionViewDelegateFlowLayout{
+final class DetailsViewController: UIViewController,DetailViewControllerProtocol, UICollectionViewDataSource, UICollectionViewDelegate,UICollectionViewDelegateFlowLayout{
   
     func getDetailMovie(data: DetailDataMovieProtocol) {
         overwiev.text = data.overViewText
@@ -42,7 +45,10 @@ class DetailsViewController: UIViewController,DetailViewControllerProtocol, UICo
         reyting.text = "\(data.voteAvg) / 10 IMDB"
         
         productCompany  = data.productionCompany
+        movie  = data
         cast.reloadData()
+    
+        
       
     }
     
@@ -59,10 +65,13 @@ class DetailsViewController: UIViewController,DetailViewControllerProtocol, UICo
         fatalError("init(coder:) has not been implemented")
     
     }
+    var delegate :detailToFavoriteProtocol?
+    var movie :DetailDataMovieProtocol?
     var productCompany : [ProductionCompany] = []
     var viewToPresenter :DetailPresenterProtocol?
     var id = 0
-
+  
+    
     @IBOutlet weak var revenueCount: UILabel!
     @IBOutlet weak var tagLines: UILabel!
     @IBOutlet weak var viewBehindImage: UIView!
@@ -78,12 +87,14 @@ class DetailsViewController: UIViewController,DetailViewControllerProtocol, UICo
         super.viewDidLoad()
         self.view.backgroundColor = .color1
         DetailRouter.creatMyDetailModule(ref: self)
-        viewToPresenter?.detailMovieGet(id: id)
+        viewToPresenter?.getDetailMovie(id: id)
         poster_path.layer.cornerRadius = 10
         viewBehindImage.layer.cornerRadius = 10
         cast.delegate = self
         cast.dataSource = self
         cast.register(UINib(nibName: "companyViewCell", bundle: nil), forCellWithReuseIdentifier: "companyViewCell")
+          
+        
 
         
        
@@ -94,11 +105,11 @@ class DetailsViewController: UIViewController,DetailViewControllerProtocol, UICo
  
     @IBAction func backToHome(_ sender: Any) {
         self.navigationController?.popViewController(animated: true)
-        
+        dismiss(animated: true)
         
     }
     @IBAction func buttomTappedLike(_ sender: UIButton) {
-        sender.tintColor = UIColor.red
+        viewToPresenter?.FVData(data: movie)
         
     }
     

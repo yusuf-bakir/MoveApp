@@ -6,7 +6,7 @@
 //
 import SnapKit
 import UIKit
-
+//MARK: -- Home Protocol 
 
 protocol HomeViewControllerProtocol :AnyObject{
     
@@ -15,7 +15,6 @@ protocol HomeViewControllerProtocol :AnyObject{
     func resultGenre(_dataGenre:[GenreEntitiy]?)
     func categoryMovie(_ movieResults: [MovieResult])
     
-   
   
 }
 final class HomeViewController: UIViewController, HomeViewControllerProtocol{

@@ -26,7 +26,7 @@ class AuthPresenter: AuthenticationPresenterProtocol{
     
     func loginSuccessfull() {
         router?.navigateToHome(from: self.view)
-   
+     
     }
     
     func loginUser(email: String, password: String) {

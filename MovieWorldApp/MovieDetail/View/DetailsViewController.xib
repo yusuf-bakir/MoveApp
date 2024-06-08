@@ -160,13 +160,13 @@ Home</string>
                             <nil key="highlightedColor"/>
                         </label>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Views" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4gu-kd-Lam">
-                            <rect key="frame" x="155.33333333333334" y="-13" width="33.666666666666657" height="12"/>
+                            <rect key="frame" x="142.33333333333334" y="-13" width="33.666666666666657" height="12"/>
                             <fontDescription key="fontDescription" name="HiraMinProN-W3" family="Hiragino Mincho ProN" pointSize="12"/>
                             <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <nil key="highlightedColor"/>
                         </label>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="324" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jJ1-dr-sPg">
-                            <rect key="frame" x="155.33333333333334" y="3" width="33.666666666666657" height="12"/>
+                            <rect key="frame" x="142.33333333333334" y="3" width="33.666666666666657" height="12"/>
                             <fontDescription key="fontDescription" name="HiraMinProN-W3" family="Hiragino Mincho ProN" pointSize="12"/>
                             <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <nil key="highlightedColor"/>
@@ -174,7 +174,7 @@ Home</string>
                     </subviews>
                     <color key="backgroundColor" name="color1"/>
                     <constraints>
-                        <constraint firstItem="jJ1-dr-sPg" firstAttribute="leading" secondItem="fA8-oN-N4g" secondAttribute="trailing" constant="29" id="0AN-4C-mVG"/>
+                        <constraint firstItem="jJ1-dr-sPg" firstAttribute="leading" secondItem="fA8-oN-N4g" secondAttribute="trailing" constant="16" id="0AN-4C-mVG"/>
                         <constraint firstItem="fA8-oN-N4g" firstAttribute="trailing" secondItem="vNb-a2-X3v" secondAttribute="trailing" constant="-11.666666666666657" id="1eC-9S-ZH1"/>
                         <constraint firstItem="jJ1-dr-sPg" firstAttribute="trailing" secondItem="4gu-kd-Lam" secondAttribute="trailing" id="CN3-r6-dAd"/>
                         <constraint firstItem="eSC-M7-7hA" firstAttribute="leading" secondItem="Vhw-QQ-tuZ" secondAttribute="leading" id="Dxm-lK-wqo"/>

@@ -8,6 +8,8 @@
 import Foundation
 import Alamofire
 
+//MARK: -- ınteractor layer
+
 protocol HomeInteractorProtocol {
     
     var ınteractorTopresenter : HomePresenterProtocol? {get set}

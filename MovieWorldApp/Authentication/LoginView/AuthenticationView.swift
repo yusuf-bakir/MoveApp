@@ -31,6 +31,7 @@ protocol AuthenticationViewProtocol:AnyObject {
         label.font = UIFont.boldSystemFont(ofSize: 30)
         label.textColor = .white
         
+        
         return label
     
     }()
@@ -89,7 +90,7 @@ protocol AuthenticationViewProtocol:AnyObject {
       
     private lazy var ımageLogo :UIImageView = {
        let ımage = UIImageView()
-        ımage.image = UIImage.play
+        ımage.image = UIImage(named: "movie-850")
         ımage.contentMode = .scaleAspectFit
         ımage.translatesAutoresizingMaskIntoConstraints = false
         ımage.isUserInteractionEnabled = true
@@ -181,8 +182,9 @@ extension AuthenticationView {
         
         
         logoLabel.snp.makeConstraints({make in
-            make.top.equalTo(100)
-            make.centerX.equalToSuperview()
+            make.top.equalTo(135)
+//            make.centerX.equalToSuperview()
+            make.leading.equalTo(TextFiledEmail.snp.leading)
         })
         ımageLogo.snp.makeConstraints({make in
             make.centerX.equalToSuperview()
