@@ -9,7 +9,7 @@ import Foundation
 protocol PeopleRouterProtocol {
     static func creatPeopleModule( ref : PeopleViewProtocol)
 }
-final class PeopleRouter:PeopleRouterProtocol {
+  final class PeopleRouter:PeopleRouterProtocol {
  
     
     static func creatPeopleModule(ref: PeopleViewProtocol) {
@@ -24,15 +24,7 @@ final class PeopleRouter:PeopleRouterProtocol {
         
         
   
-        
- 
-//        
-//        let ınteractor  = AuthInteractor()
-//        let router = AuthenticationRoture()
-//        let presenter = AuthPresenter(ınteractor: ınteractor, router:router ,view:ref )
-//        ref.presenterAuth = presenter
-//        ref.presenterAuth?.ınteractor = ınteractor
-//        ref.presenterAuth?.ınteractor.ınteractorTopresenter = presenter
+  
         
     }
     

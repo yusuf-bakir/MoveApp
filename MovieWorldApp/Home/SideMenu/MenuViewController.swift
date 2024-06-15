@@ -8,14 +8,14 @@
 import UIKit
 import SnapKit
 
-protocol menuCategory :AnyObject{
+protocol menuCategoryProtocol :AnyObject{
     func category(type :MovieCategory)
 }
 
 
 
 class MenuViewController: UIViewController,UITableViewDataSource,UITableViewDelegate  {
-  weak  var delegate : menuCategory?
+  weak  var delegate : menuCategoryProtocol?
     var item = listCategory
     private let tableView = UITableView()
     override func viewDidLoad() {

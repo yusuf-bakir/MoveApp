@@ -22,11 +22,12 @@ struct Movie: Codable {
 
 // MARK: - MovieResult
 struct MovieResult: Codable,MovieCellProtocol{
-    
+
+
     let adult: Bool?
     let backdropPath: String?
     let genreIDS: [Int]?
-    let id: Int?
+    var id: Int?
     let originalLanguage, originalTitle, overview: String?
     let popularity: Double?
     let posterPath, releaseDate, title: String?
@@ -36,8 +37,13 @@ struct MovieResult: Codable,MovieCellProtocol{
     let character, creditID: String?
     let order: Int?
     let department, job: String?
+
+    var movieID: Int{
+        id ?? 0
+    }
     
 
+    
     var posterImage: String {
         NetworkHelper.shared.getImagePath(url: posterPath ?? "")
     }

@@ -1,104 +1,98 @@
-//
-//  LoginVC.swift
-//  MovieWorldApp
-//
-//  Created by yusuf bakır on 19.03.2024.
-//
+    //
+    //  LoginVC.swift
+    //  MovieWorldApp
+    //
+    //  Created by yusuf bakır on 19.03.2024.
+    //
 
-import UIKit
-protocol AuthenticationVCProtocol :AnyObject{
-    func showError(message: String)
-   
-    var presenterAuth :AuthenticationPresenterProtocol? { get set }
-}
+    import UIKit
+    protocol AuthenticationVCProtocol :AnyObject{
+        func showError(message: String)
        
-final class AuthenticationVC: UIViewController, UINavigationControllerDelegate {
-
-    
-           var presenterAuth :AuthenticationPresenterProtocol?
-           var AuthDelegate:AuthenticationViewProtocol?
-        private var passwordText = ""
-        private var emailText =  ""
- 
-     override func loadView() {
-         let authentication = AuthenticationView(self)
-        view = authentication
-        authentication.AuthDelegate = self
-         
-        
-      
-        }
-    
-    
-    
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        AuthenticationRoture.start(ref: self)
-        
-   
-        
-       
+        var presenterAuth :AuthenticationPresenterProtocol? { get set }
     }
-    
-
-}
-
-    
-
-extension AuthenticationVC:AuthenticationViewProtocol {
-    
-  
-  
-    
-    func passwordInput(_ text: String) -> String {
-        passwordText = text
-        print(passwordText)
-        return passwordText
            
-    }
-    
-    func emailInput(_ text: String) -> String {
-        emailText = text
-        print(emailText)
-        return emailText
-       
-    }
-    
-    func labelTapp() {
-        print("label tapp")
-        
-    }
-    
+    final class AuthenticationVC: UIViewController, UINavigationControllerDelegate {
 
-   
-    func animationImage() {
-   
-    }
-    
-    func signinTappedButtom() {
-        let secondViewController = SigninViewController()
-        navigationController?.pushViewController(secondViewController, animated: true)
         
-    
-    }
-    
-    func loginTappedButtom() {
+               var presenterAuth :AuthenticationPresenterProtocol?
+               var AuthDelegate:AuthenticationViewProtocol?
+            private var passwordText = ""
+            private var emailText =  ""
+     
+         override func loadView() {
+             let authentication = AuthenticationView(self)
+            view = authentication
+            authentication.AuthDelegate = self
+             
+            
+          
+            }
+        override func viewDidLoad() {
+            super.viewDidLoad()
+            AuthenticationRoture.start(ref: self)
        
-//        presenterAuth?.loginUser(email: emailText, password: passwordText)
-        presenterAuth?.loginSuccessfull()
+           
+        }
+        
+
+    }
+
+    extension AuthenticationVC:AuthenticationViewProtocol {
         
       
-    }
-    
-    
-}
-extension AuthenticationVC:AuthenticationVCProtocol {
-    func showError(message: String) {
-   let showErrorLogin = addAlert(title: "Uyarı", message: message)
-        present(showErrorLogin, animated: true, completion: nil)
+      
+        
+        func passwordInput(_ text: String) -> String {
+            passwordText = text
+       
+            return passwordText
+               
+        }
+        
+        func emailInput(_ text: String) -> String {
+            emailText = text
+         
+            return emailText
+           
+        }
+        
+        func labelTapp() {
+            print("label tapp")
+            
+        }
+        
+
+       
+        func animationImage() {
+       
+        }
+        
+        func signinTappedButtom() {
+            let secondViewController = SigninViewController()
+            navigationController?.pushViewController(secondViewController, animated: true)
+ 
+            
+        
+        }
+        
+        func loginTappedButtom() {
+           
+           presenterAuth?.loginUser(email: emailText, password: passwordText)
+//            presenterAuth?.loginSuccessfull()
+            
+          
+        }
+        
         
     }
-    
-    
-    
-}
+    extension AuthenticationVC:AuthenticationVCProtocol {
+        func showError(message: String) {
+       let showErrorLogin = addAlert(title: "Uyarı", message: message)
+            present(showErrorLogin, animated: true, completion: nil)
+            
+        }
+        
+        
+        
+    }

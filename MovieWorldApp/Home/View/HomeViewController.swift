@@ -6,43 +6,24 @@
 //
 import SnapKit
 import UIKit
-
+//MARK: -- Home Protocol 
 
 protocol HomeViewControllerProtocol :AnyObject{
+    
     var viewToPresenter : HomePresenterProtocol?{get set }
     func updateMovieResults(_ movieResults: [MovieResult])
     func resultGenre(_dataGenre:[GenreEntitiy]?)
     func categoryMovie(_ movieResults: [MovieResult])
     
-   
   
 }
 final class HomeViewController: UIViewController, HomeViewControllerProtocol{
-    func categoryMovie(_ movieResults: [MovieResult]) {
-        DispatchQueue.main.async { [weak self] in
-           self?.movieCategory?.removeAll()
-           self?.movieCategory = movieResults
-            self?.collectionView.reloadData()
-         
-        }
-    }
-    
 
-    
- 
-    func resultGenre(_dataGenre: [GenreEntitiy]?) {
-        
-        DispatchQueue.main.async { [weak self] in
-            self?.movieGenres = _dataGenre
-            
-            GenreHandler.shared.setItems(items: self?.movieGenres ?? [])
-            
-        }
-    }
+    var completionHandler: ((Int) -> Void)?
     var genre = "Popular"
     var movieCategory:[MovieResult]?
     var movieGenres :[GenreEntitiy]?
-    private  var collectionView: UICollectionView!
+    private  var  collectionView: UICollectionView!
     var viewToPresenter: HomePresenterProtocol?
     var movieResulstData :[MovieResult]?
     
@@ -57,9 +38,29 @@ final class HomeViewController: UIViewController, HomeViewControllerProtocol{
         viewToPresenter?.getGenre()
        view.backgroundColor = .color1
         favoriteButtom()
+//    
       
     
         
+    }
+    func categoryMovie(_ movieResults: [MovieResult]) {
+        DispatchQueue.main.async { [weak self] in
+           self?.movieCategory?.removeAll()
+           self?.movieCategory = movieResults
+            self?.collectionView.reloadData()
+         
+        }
+    }
+    
+ 
+    func resultGenre(_dataGenre: [GenreEntitiy]?) {
+        
+        DispatchQueue.main.async { [weak self] in
+            self?.movieGenres = _dataGenre
+            
+            GenreHandler.shared.setItems(items: self?.movieGenres ?? [])
+            
+        }
     }
     
     func favoriteButtom() {
@@ -73,16 +74,7 @@ final class HomeViewController: UIViewController, HomeViewControllerProtocol{
                view.addSubview(button)
 
     }
-//    private lazy var buttom : UIButton = {
-//        let button = UIButton(type: .system)
-//        if let image = UIImage(systemName: "circle.grid.3x3") {
-//            let whiteImage = image.withTintColor(.white, renderingMode: .alwaysOriginal)
-//                button.setImage(whiteImage, for: .normal)
-//               }
-//               button.frame = CGRect(x: view.bounds.width - 100, y: 50, width: 80, height: 40) // Sağ üst köşe için konum ayarla
-//               button.addTarget(self, action: #selector(buttonTapped), for: .touchUpInside)
-//               return buttom
-//    }()
+    
     @objc func buttonTapped() {
         let menu = MenuViewController()
         menu.delegate = self
@@ -101,49 +93,8 @@ final class HomeViewController: UIViewController, HomeViewControllerProtocol{
         
     }
 } 
-
-extension HomeViewController:UICollectionViewDataSource,UICollectionViewDelegateFlowLayout {
-    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return movieCategory?.count ?? 0
-       }
-    
-
-       func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-           let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "HorizontalViewCell", for: indexPath)  as! HorizontalViewCell
-           cell.configreCell(data:  movieCategory?[indexPath.row])
-           
-           
-           
-           return cell
-       }
-    
-    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        return CGSize(width: collectionView.frame.width * 327 / 375, height: 120)
-    }
-    
-    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, referenceSizeForHeaderInSection section: Int) -> CGSize {
-        CGSize(width: collectionView.frame.width, height: 400)
-    }
-    
-    
-     func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> UICollectionReusableView {
-//        let header = collectionView.dequeueReusableSupplementaryView(ofKind: kind, withReuseIdentifier: "HomeHeader", for: indexPath) as! HomeHeader
-         if kind == UICollectionView.elementKindSectionHeader {
-                let headerView = collectionView.dequeueReusableSupplementaryView(ofKind: kind, withReuseIdentifier: "HomeHeader", for: indexPath) as! HomeHeader
-             headerView.titleCategory.text = genre
-             headerView.confirgeData(data:movieResulstData ?? [])
-            
-                return headerView
-            } else {
-                
-                return UICollectionReusableView()
-            }
-       
-      
-        
-    }
-    
-    
+ // MARK: -- colletionSetup
+extension HomeViewController {
     func colletionSetup() {
         let layout  = UICollectionViewFlowLayout()
         layout.scrollDirection = .vertical
@@ -172,10 +123,53 @@ extension HomeViewController:UICollectionViewDataSource,UICollectionViewDelegate
            
         }
 }
-//#Preview{
-//    HomeViewController()
-//}
-extension HomeViewController: menuCategory{
+//MARK: -- Horizontal colletionview
+extension HomeViewController:UICollectionViewDataSource,UICollectionViewDelegateFlowLayout {
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        return movieCategory?.count ?? 0
+       }
+    
+
+       func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+           let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "HorizontalViewCell", for: indexPath)  as! HorizontalViewCell
+           cell.configreCell(data:  movieCategory?[indexPath.row])
+   
+           return cell
+       }
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        return CGSize(width: collectionView.frame.width * 327 / 375, height: 120)
+    }
+    
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        let movieID = movieCategory?[indexPath.row].id
+     
+        viewToPresenter?.showDetail(id: movieID)
+    }
+    //MARK: -- Header colletionview
+    
+     func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> UICollectionReusableView {
+         if kind == UICollectionView.elementKindSectionHeader {
+                let headerView = collectionView.dequeueReusableSupplementaryView(ofKind: kind, withReuseIdentifier: "HomeHeader", for: indexPath) as! HomeHeader
+             headerView.titleCategory.text = genre
+             headerView.confirgeData(data:movieResulstData ?? [])
+            
+                return headerView
+            } else {
+                
+                return UICollectionReusableView()
+            }
+    }
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, referenceSizeForHeaderInSection section: Int) -> CGSize {
+        CGSize(width: collectionView.frame.width, height: 400)
+        
+    }
+
+
+}
+
+extension HomeViewController: menuCategoryProtocol{
     func category(type: MovieCategory) {
         genre = type.rawValue
         viewToPresenter?.getCategoryMovie(type: type)
