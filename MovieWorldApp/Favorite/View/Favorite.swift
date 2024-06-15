@@ -11,16 +11,7 @@ protocol FavoriteViewControllerProtocol {
     var viewToPresenter : FavoritePresenterProtocol?{get set }
    
 }
-class Favorite: UIViewController,detailToFavoriteProtocol ,UITableViewDelegate,UITableViewDataSource{
-    func didDataTransfer(data: DetailDataMovieProtocol?) {
-        if let data = data {
-        print(data)
-        }
-    }
-    
-   
-    
-
+class Favorite: UIViewController ,UITableViewDelegate,UITableViewDataSource{
 
     
       var viewToPresenter : FavoritePresenterProtocol?
@@ -41,7 +32,7 @@ class Favorite: UIViewController,detailToFavoriteProtocol ,UITableViewDelegate,U
         labelConstraint()
         tableView.delegate = self
         tableView.dataSource = self
-
+        FavoriteRouter.creatModuleFavorite(view: self)
         
         
     }  
@@ -89,7 +80,7 @@ class Favorite: UIViewController,detailToFavoriteProtocol ,UITableViewDelegate,U
     }
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         
-        return 10
+        return itemsFavorite.count
 
 
         
@@ -99,8 +90,8 @@ class Favorite: UIViewController,detailToFavoriteProtocol ,UITableViewDelegate,U
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "FavoriteTableCell", for: indexPath) as! FavoriteTableCell
-//        cell.raytingFV.text = list[indexPath.row].overViewText
-        cell.backgroundColor = .color1
+        cell.raytingFV.text = itemsFavorite[indexPath.row].overViewText
+//        cell.backgroundColor = .color1
         return cell
        
     }

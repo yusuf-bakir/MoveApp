@@ -39,6 +39,7 @@
 		F079046F2BA093E2000EA4B5 /* SnapKit-Dynamic in Frameworks */ = {isa = PBXBuildFile; productRef = F079046E2BA093E2000EA4B5 /* SnapKit-Dynamic */; };
 		F07904712BA0C561000EA4B5 /* OnboardViewControler.swift in Sources */ = {isa = PBXBuildFile; fileRef = F07904702BA0C561000EA4B5 /* OnboardViewControler.swift */; };
 		F08113DE2BDEC30A00C06B39 /* Entitiy.swift in Sources */ = {isa = PBXBuildFile; fileRef = F08113DD2BDEC30A00C06B39 /* Entitiy.swift */; };
+		F08674E82C1E56B100A41A88 /* FavoriteRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = F08674E72C1E56B100A41A88 /* FavoriteRouter.swift */; };
 		F091EBC62B9FBA4400A6A042 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F091EBC52B9FBA4400A6A042 /* AppDelegate.swift */; };
 		F091EBC82B9FBA4400A6A042 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F091EBC72B9FBA4400A6A042 /* SceneDelegate.swift */; };
 		F091EBCA2B9FBA4400A6A042 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F091EBC92B9FBA4400A6A042 /* ViewController.swift */; };
@@ -140,6 +141,7 @@
 		F06A0B332BE6DC91007E28E3 /* GenreHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenreHandler.swift; sourceTree = "<group>"; };
 		F07904702BA0C561000EA4B5 /* OnboardViewControler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardViewControler.swift; sourceTree = "<group>"; };
 		F08113DD2BDEC30A00C06B39 /* Entitiy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Entitiy.swift; sourceTree = "<group>"; };
+		F08674E72C1E56B100A41A88 /* FavoriteRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteRouter.swift; sourceTree = "<group>"; };
 		F091EBC22B9FBA4400A6A042 /* MovieWorldApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MovieWorldApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F091EBC52B9FBA4400A6A042 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F091EBC72B9FBA4400A6A042 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -577,6 +579,7 @@
 		F0B5B3502BA4F9730057FE6F /* Router */ = {
 			isa = PBXGroup;
 			children = (
+				F08674E72C1E56B100A41A88 /* FavoriteRouter.swift */,
 			);
 			path = Router;
 			sourceTree = "<group>";
@@ -855,6 +858,7 @@
 				F01336DC2BFD0F7400902CFD /* PeopleCollectionViewCell.swift in Sources */,
 				F05EB8FD2BB8BC1F001FC6FE /* HomePresenter.swift in Sources */,
 				F06A0B2F2BE6D5FA007E28E3 /* LabelCollectionViewCell.swift in Sources */,
+				F08674E82C1E56B100A41A88 /* FavoriteRouter.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
